@@ -1,23 +1,10 @@
 package org.jabref.logic.importer.fileformat;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PushbackReader;
-import java.io.Reader;
-import java.io.StringWriter;
-import java.util.Collection;
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
+import java.io.*;
+import java.util.*;
 import java.util.regex.Pattern;
 
+import org.jabref.gui.DialogService;
 import org.jabref.logic.bibtex.FieldContentFormatter;
 import org.jabref.logic.bibtex.FieldWriter;
 import org.jabref.logic.exporter.BibtexDatabaseWriter;
@@ -27,9 +14,11 @@ import org.jabref.logic.importer.Importer;
 import org.jabref.logic.importer.ParseException;
 import org.jabref.logic.importer.Parser;
 import org.jabref.logic.importer.ParserResult;
+import org.jabref.logic.importer.util.GroupsParser;
 import org.jabref.logic.importer.util.MetaDataParser;
 import org.jabref.logic.l10n.Localization;
 import org.jabref.logic.util.OS;
+import org.jabref.model.TreeNode;
 import org.jabref.model.database.BibDatabase;
 import org.jabref.model.database.KeyCollisionException;
 import org.jabref.model.entry.BibEntry;
@@ -40,12 +29,25 @@ import org.jabref.model.entry.field.FieldFactory;
 import org.jabref.model.entry.field.FieldProperty;
 import org.jabref.model.entry.field.StandardField;
 import org.jabref.model.entry.types.EntryTypeFactory;
+import org.jabref.model.groups.AbstractGroup;
+import org.jabref.model.groups.ExplicitGroup;
+import org.jabref.model.groups.GroupTreeNode;
+import org.jabref.model.groups.WordKeywordGroup;
 import org.jabref.model.metadata.MetaData;
 import org.jabref.model.util.DummyFileUpdateMonitor;
 import org.jabref.model.util.FileUpdateMonitor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 /**
  * Class for importing BibTeX-files.
@@ -220,12 +222,13 @@ public class BibtexParser implements Parser {
             } else if ("comment".equals(entryType)) {
                 parseJabRefComment(meta);
             } else {
+                LOGGER.info("parse entry");
                 // Not a comment, preamble, or string. Thus, it is an entry
                 parseAndAddEntry(entryType);
             }
-
             skipWhitespace();
         }
+
 
         try {
             parserResult.setMetaData(metaDataParser.parse(
@@ -234,6 +237,13 @@ public class BibtexParser implements Parser {
         } catch (ParseException exception) {
             parserResult.addException(exception);
         }
+
+        Optional<GroupTreeNode> tree  = parserResult.getMetaData().getGroups();
+        ExplicitGroup group = (ExplicitGroup) tree.get().
+
+        BibEntry entry = database.getEntriesByCitationKey("Swain:2023aa").getFirst();
+        group.add(entry);
+
 
         parseRemainingContent();
 
@@ -305,6 +315,7 @@ public class BibtexParser implements Parser {
         // These have been inserted to prevent too long lines when the file was saved, and are not part of the data.
         String comment = buffer.toString().replaceAll("[\\x0d\\x0a]", "");
         if (comment.substring(0, Math.min(comment.length(), MetaData.META_FLAG.length())).equals(MetaData.META_FLAG)) {
+            // LOGGER.info("Meta flag");
             if (comment.startsWith(MetaData.META_FLAG)) {
                 String rest = comment.substring(MetaData.META_FLAG.length());
 
@@ -318,7 +329,10 @@ public class BibtexParser implements Parser {
                 }
             }
         } else if (comment.substring(0, Math.min(comment.length(), MetaData.ENTRYTYPE_FLAG.length()))
-                          .equals(MetaData.ENTRYTYPE_FLAG)) {
+                .equals(MetaData.ENTRYTYPE_FLAG)) {
+
+            //LOGGER.info("Entry flag");
+
             // A custom entry type can also be stored in a
             // "@comment"
             Optional<BibEntryType> typ = MetaDataParser.parseCustomEntryType(comment);
@@ -331,6 +345,31 @@ public class BibtexParser implements Parser {
             // custom entry types are always re-written by JabRef and not stored in the file
             dumpTextReadSoFarToString();
         }
+        if (comment.startsWith(MetaData.BIBDESK_FLAG)) {
+            parseBibDeskComment(comment, meta);
+        }
+    }
+
+    private Map<String, String> parseBibDeskComment(String comment, Map<String, String> meta) {
+        String xml = comment.substring(MetaData.BIBDESK_FLAG.length() + 1, comment.length() - 1);
+        try {
+            DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            Document doc = builder.parse(new ByteArrayInputStream(xml.getBytes()));
+
+            NodeList keyList = doc.getElementsByTagName("key");
+            NodeList stringList = doc.getElementsByTagName("string");
+
+            for(int i = 0; i < keyList.getLength(); i++) {
+                LOGGER.info("Keys: " + keyList.item(i).getTextContent() + ", Values: " + stringList.item(i).getTextContent());
+            }
+
+            meta.put("databaseType", "bibtex;");
+            meta.put("grouping", "0 AllEntriesGroup:;1 StaticGroup:"+ stringList.item(0).getTextContent() +"\\;0\\;0\\;\\;\\;\\;;");
+
+        } catch (ParserConfigurationException | IOException | SAXException e) {
+            throw new RuntimeException(e);
+        }
+        return meta;
     }
 
     private void parseBibtexString() throws IOException {
@@ -338,6 +377,7 @@ public class BibtexParser implements Parser {
         bibtexString.setParsedSerialization(dumpTextReadSoFarToString());
         try {
             database.addString(bibtexString);
+
         } catch (KeyCollisionException ex) {
             parserResult.addWarning(Localization.lang("Duplicate string name") + ": " + bibtexString.getName());
         }
