@@ -1,7 +1,9 @@
 package org.jabref.logic.importer.fileformat;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.PushbackReader;
 import java.io.Reader;
 import java.io.StringWriter;
@@ -624,6 +626,28 @@ public class BibtexParser implements Parser {
                     entry.addKeyword(content, importFormatPreferences.bibEntryPreferences().getKeywordSeparator());
                 }
             } else {
+                //TODO: change content here?
+                if(field.getName().length() > 10 && field.getName().substring(0, 10).equals("bdsk-file-")) {
+                    String newContent = "";
+                    try {
+                        // Create a process for the base64 -D | plutil -p - command
+                        ProcessBuilder processBuilder = new ProcessBuilder("bash", "-c", "echo \"" + content + "\" | base64 -D | plutil -p -");
+
+                        Process process = processBuilder.start();
+
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+
+                        String line;
+                        while ((line = reader.readLine()) != null) {
+                            newContent += line;
+                        }
+                        int exitCode = process.waitFor();
+
+                    } catch (IOException | InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    content = newContent;
+                }
                 entry.setField(field, content);
             }
         }
