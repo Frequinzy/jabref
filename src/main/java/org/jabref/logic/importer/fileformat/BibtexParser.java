@@ -3,8 +3,6 @@ package org.jabref.logic.importer.fileformat;
 import java.io.*;
 import java.util.*;
 import java.util.regex.Pattern;
-
-import org.jabref.gui.DialogService;
 import org.jabref.logic.bibtex.FieldContentFormatter;
 import org.jabref.logic.bibtex.FieldWriter;
 import org.jabref.logic.exporter.BibtexDatabaseWriter;
@@ -14,11 +12,9 @@ import org.jabref.logic.importer.Importer;
 import org.jabref.logic.importer.ParseException;
 import org.jabref.logic.importer.Parser;
 import org.jabref.logic.importer.ParserResult;
-import org.jabref.logic.importer.util.GroupsParser;
 import org.jabref.logic.importer.util.MetaDataParser;
 import org.jabref.logic.l10n.Localization;
 import org.jabref.logic.util.OS;
-import org.jabref.model.TreeNode;
 import org.jabref.model.database.BibDatabase;
 import org.jabref.model.database.KeyCollisionException;
 import org.jabref.model.entry.BibEntry;
@@ -29,10 +25,6 @@ import org.jabref.model.entry.field.FieldFactory;
 import org.jabref.model.entry.field.FieldProperty;
 import org.jabref.model.entry.field.StandardField;
 import org.jabref.model.entry.types.EntryTypeFactory;
-import org.jabref.model.groups.AbstractGroup;
-import org.jabref.model.groups.ExplicitGroup;
-import org.jabref.model.groups.GroupTreeNode;
-import org.jabref.model.groups.WordKeywordGroup;
 import org.jabref.model.metadata.MetaData;
 import org.jabref.model.util.DummyFileUpdateMonitor;
 import org.jabref.model.util.FileUpdateMonitor;
@@ -41,7 +33,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -82,11 +73,13 @@ public class BibtexParser implements Parser {
     private int line = 1;
     private ParserResult parserResult;
     private final MetaDataParser metaDataParser;
+    private Map<String, String> parsedGroups;
 
     public BibtexParser(ImportFormatPreferences importFormatPreferences, FileUpdateMonitor fileMonitor) {
         this.importFormatPreferences = Objects.requireNonNull(importFormatPreferences);
         this.fieldContentFormatter = new FieldContentFormatter(importFormatPreferences.fieldPreferences());
         this.metaDataParser = new MetaDataParser(fileMonitor);
+        this.parsedGroups = new HashMap<>();
     }
 
     public BibtexParser(ImportFormatPreferences importFormatPreferences) {
@@ -222,13 +215,13 @@ public class BibtexParser implements Parser {
             } else if ("comment".equals(entryType)) {
                 parseJabRefComment(meta);
             } else {
-                LOGGER.info("parse entry");
                 // Not a comment, preamble, or string. Thus, it is an entry
                 parseAndAddEntry(entryType);
             }
             skipWhitespace();
         }
 
+        addBibDeskGroupEntriesToJabRefGroups();
 
         try {
             parserResult.setMetaData(metaDataParser.parse(
@@ -237,13 +230,6 @@ public class BibtexParser implements Parser {
         } catch (ParseException exception) {
             parserResult.addException(exception);
         }
-
-        Optional<GroupTreeNode> tree  = parserResult.getMetaData().getGroups();
-        ExplicitGroup group = (ExplicitGroup) tree.get().
-
-        BibEntry entry = database.getEntriesByCitationKey("Swain:2023aa").getFirst();
-        group.add(entry);
-
 
         parseRemainingContent();
 
@@ -315,7 +301,6 @@ public class BibtexParser implements Parser {
         // These have been inserted to prevent too long lines when the file was saved, and are not part of the data.
         String comment = buffer.toString().replaceAll("[\\x0d\\x0a]", "");
         if (comment.substring(0, Math.min(comment.length(), MetaData.META_FLAG.length())).equals(MetaData.META_FLAG)) {
-            // LOGGER.info("Meta flag");
             if (comment.startsWith(MetaData.META_FLAG)) {
                 String rest = comment.substring(MetaData.META_FLAG.length());
 
@@ -330,8 +315,6 @@ public class BibtexParser implements Parser {
             }
         } else if (comment.substring(0, Math.min(comment.length(), MetaData.ENTRYTYPE_FLAG.length()))
                 .equals(MetaData.ENTRYTYPE_FLAG)) {
-
-            //LOGGER.info("Entry flag");
 
             // A custom entry type can also be stored in a
             // "@comment"
@@ -350,26 +333,64 @@ public class BibtexParser implements Parser {
         }
     }
 
-    private Map<String, String> parseBibDeskComment(String comment, Map<String, String> meta) {
+    /**
+     * Adds BibDesk group entries to the JabRef database
+     * */
+    private void addBibDeskGroupEntriesToJabRefGroups(){
+        for (String groupName: parsedGroups.keySet()) {
+            String[] citationKeys = parsedGroups.get(groupName).split(",");
+            for (String citation : citationKeys){
+                String groupValue = database.getEntryByCitationKey(citation).get().getField(StandardField.GROUPS).orElse(null);
+                if(groupValue == null) { // if the citation does not belong to a group already
+                    database.getEntryByCitationKey(citation).get().setField(StandardField.GROUPS, groupName);
+                } else { // if the citation does belong to a group already, we concatinate
+                    groupValue += ","+ groupName;
+                    database.getEntryByCitationKey(citation).get().setField(StandardField.GROUPS, groupValue);
+                }
+            }
+        }
+    }
+
+    /**
+     * Parses comment types found in BibDesk, to migrate BibDesk Static Groups to JabRef.
+     * */
+    private void parseBibDeskComment(String comment, Map<String, String> meta) {
         String xml = comment.substring(MetaData.BIBDESK_FLAG.length() + 1, comment.length() - 1);
         try {
+            //Build a document to handle the xml tags
             DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             Document doc = builder.parse(new ByteArrayInputStream(xml.getBytes()));
+            doc.getDocumentElement().normalize();
 
-            NodeList keyList = doc.getElementsByTagName("key");
-            NodeList stringList = doc.getElementsByTagName("string");
-
-            for(int i = 0; i < keyList.getLength(); i++) {
-                LOGGER.info("Keys: " + keyList.item(i).getTextContent() + ", Values: " + stringList.item(i).getTextContent());
-            }
-
+            NodeList dictList = doc.getElementsByTagName("dict");
             meta.put("databaseType", "bibtex;");
-            meta.put("grouping", "0 AllEntriesGroup:;1 StaticGroup:"+ stringList.item(0).getTextContent() +"\\;0\\;0\\;\\;\\;\\;;");
+            meta.put("grouping", "0 AllEntriesGroup:;");
 
+            // Since each static group has their own dict element, we iterate through them
+            for(int i = 0; i < dictList.getLength(); i++) {
+                Element dictElement = (Element) dictList.item(i);
+                NodeList keyList = dictElement.getElementsByTagName("key");
+                NodeList stringList = dictElement.getElementsByTagName("string");
+
+                String groupName = null;
+                String citationKeys = null;
+
+                // Retrieves group name and group entries and adds these to the metadata
+                for(int j = 0; j < keyList.getLength(); j++) {
+                    if(keyList.item(j).getTextContent().matches("group name")) {
+                        groupName = stringList.item(j).getTextContent();
+                        String oldValue = meta.get("grouping"); // if there are multiple groups we concatinate to the existing String
+                        meta.put("grouping", oldValue + "1 StaticGroup:"+ groupName +"\\;0\\;0\\;\\;\\;\\;;");
+                    } else if (keyList.item(j).getTextContent().matches("keys")) {
+                        citationKeys = stringList.item(j).getTextContent(); // adds group entries
+                    }
+                }
+                //Adds the group name and citation keys to the field so all the entries can be added in the groups once parsed
+                parsedGroups.put(groupName,citationKeys);
+            }
         } catch (ParserConfigurationException | IOException | SAXException e) {
             throw new RuntimeException(e);
         }
-        return meta;
     }
 
     private void parseBibtexString() throws IOException {
