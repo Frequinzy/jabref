@@ -1437,8 +1437,12 @@ class BibtexParserTest {
         GroupTreeNode root = result.getMetaData().getGroups().get();
         assertEquals(new AllEntriesGroup("All entries"), root.getGroup());
         assertEquals(2, root.getNumberOfChildren());
-        assertEquals(new ExplicitGroup("firstTestGroup", GroupHierarchyType.INDEPENDENT, ','), root.getChildren().get(0).getGroup());
-        assertEquals(new ExplicitGroup("secondTestGroup", GroupHierarchyType.INDEPENDENT, ','), root.getChildren().get(1).getGroup());
+        ExplicitGroup firstTestGroupExpected = new ExplicitGroup("firstTestGroup", GroupHierarchyType.INDEPENDENT, ',');
+        firstTestGroupExpected.setExpanded(false);
+        assertEquals(firstTestGroupExpected, root.getChildren().get(0).getGroup());
+        ExplicitGroup secondTestGroupExpected = new ExplicitGroup("secondTestGroup", GroupHierarchyType.INDEPENDENT, ',');
+        secondTestGroupExpected.setExpanded(false);
+        assertEquals(secondTestGroupExpected, root.getChildren().get(1).getGroup());
 
         BibDatabase db = result.getDatabase();
         assertTrue(root.getChildren().get(0).getGroup().containsAll(db.getEntries()));
