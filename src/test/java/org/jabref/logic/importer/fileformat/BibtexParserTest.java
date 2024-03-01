@@ -1380,8 +1380,7 @@ class BibtexParserTest {
         assertEquals(Arrays.asList("Key1", "Key2"),
                 ((ExplicitGroup) root.getChildren().get(2).getGroup()).getLegacyEntryKeys());
     }
-
-
+    
     /**
      * Checks that BibDesk Static Groups are available after parsing the library
      */
