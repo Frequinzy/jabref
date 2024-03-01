@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.io.PushbackReader;
 import java.io.Reader;
 import java.io.StringWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.Collection;
 import java.util.Deque;
@@ -19,6 +21,8 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Pattern;
 import com.dd.plist.NSObject;
+import com.dd.plist.NSDictionary;
+import com.dd.plist.NSString;
 import com.dd.plist.BinaryPropertyListParser;
 
 import org.jabref.logic.bibtex.FieldContentFormatter;
@@ -38,6 +42,7 @@ import org.jabref.model.database.KeyCollisionException;
 import org.jabref.model.entry.BibEntry;
 import org.jabref.model.entry.BibEntryType;
 import org.jabref.model.entry.BibtexString;
+import org.jabref.model.entry.LinkedFile;
 import org.jabref.model.entry.field.Field;
 import org.jabref.model.entry.field.FieldFactory;
 import org.jabref.model.entry.field.FieldProperty;
@@ -629,37 +634,22 @@ public class BibtexParser implements Parser {
             } else {
                 //TODO: change content here?
                 if(field.getName().length() > 10 && field.getName().substring(0, 10).equals("bdsk-file-")) {
-                    // String newContent = "";
-                    // try {
-                    //     // Create a process for the base64 -D | plutil -p - command
-                    //     ProcessBuilder processBuilder = new ProcessBuilder("bash", "-c", "echo \"" + content + "\" | base64 -D | plutil -p -");
-
-                    //     Process process = processBuilder.start();
-
-                    //     BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-
-                    //     String line;
-                    //     while ((line = reader.readLine()) != null) {
-                    //         newContent += line;
-                    //     }
-                    //     int exitCode = process.waitFor();
-
-                    // } catch (IOException | InterruptedException e) {
-                    //     e.printStackTrace();
-                    // }
-                    // content = newContent;
                     byte[] decodedBytes = Base64.getDecoder().decode(content);
-                    NSObject parsed = BinaryPropertyListParser.parse(decodedBytes);
-                    StringBuilder strBuilder = new StringBuilder();
-                    parsed.toASCII(strBuilder, 0);
-                    // One of these two
-                    // Not sure if level should be 0 or not
-                    parsed.toASCIIGnuStep(strBuilder, 0);
-
-                    String result = strBuilder.toString();
-                    content = result;
+                    try {
+                        NSDictionary plist = (NSDictionary) BinaryPropertyListParser.parse(decodedBytes);
+                        NSString relativePath = (NSString) plist.objectForKey("relativePath");
+                        // Creates a relative path to the .bib file. Should maybe try to make it absolute
+                        // or look at how they create references.
+                        Path path = Paths.get(relativePath.getContent());
+                        // We should get the fileType and also look at what should be in the description.
+                        LinkedFile file = new LinkedFile("", path, "");
+                        entry.addFile(file);
+                    } catch (Exception e) {
+                        throw new IOException();
+                    }
+                } else {
+                    entry.setField(field, content);
                 }
-                entry.setField(field, content);
             }
         }
     }
