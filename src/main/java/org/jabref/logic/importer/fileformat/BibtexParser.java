@@ -44,8 +44,20 @@ import org.jabref.model.metadata.MetaData;
 import org.jabref.model.util.DummyFileUpdateMonitor;
 import org.jabref.model.util.FileUpdateMonitor;
 
+import java.io.*;
+
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 /**
  * Class for importing BibTeX-files.
@@ -81,10 +93,13 @@ public class BibtexParser implements Parser {
     private ParserResult parserResult;
     private final MetaDataParser metaDataParser;
 
+    private boolean detectedSmartGroup;
+
     public BibtexParser(ImportFormatPreferences importFormatPreferences, FileUpdateMonitor fileMonitor) {
         this.importFormatPreferences = Objects.requireNonNull(importFormatPreferences);
         this.fieldContentFormatter = new FieldContentFormatter(importFormatPreferences.fieldPreferences());
         this.metaDataParser = new MetaDataParser(fileMonitor);
+        detectedSmartGroup = false;
     }
 
     public BibtexParser(ImportFormatPreferences importFormatPreferences) {
@@ -226,6 +241,9 @@ public class BibtexParser implements Parser {
 
             skipWhitespace();
         }
+        if (detectedSmartGroup){
+            //parse group
+        }
 
         try {
             parserResult.setMetaData(metaDataParser.parse(
@@ -327,11 +345,63 @@ public class BibtexParser implements Parser {
             } else {
                 parserResult.addWarning(Localization.lang("Ill-formed entrytype comment in BIB file") + ": " + comment);
             }
-
             // custom entry types are always re-written by JabRef and not stored in the file
             dumpTextReadSoFarToString();
+        } else if (comment.startsWith(MetaData.BIBDESK_SMART_GROUP)) {
+            parseSmartGroup(comment, meta);
         }
     }
+
+
+    private void parseSmartGroup(String comment, Map<String, String> meta){
+        String xml = comment.substring(MetaData.BIBDESK_SMART_GROUP.length() + 1, comment.length() - 1);
+        try {
+            //Build a document to handle the xml tags
+            DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            Document doc = builder.parse(new ByteArrayInputStream(xml.getBytes()));
+            doc.getDocumentElement().normalize();
+
+            NodeList dictList = doc.getElementsByTagName("dict");
+            meta.putIfAbsent("databaseType", "bibtex;");
+            meta.putIfAbsent("grouping", "0 AllEntriesGroup:;");
+
+            // Since each static group has their own dict element, we iterate through them
+            for(int i = 0; i < dictList.getLength(); i++) {
+                Element dictElement = (Element) dictList.item(i);
+                NodeList keyList = dictElement.getElementsByTagName("key");
+                NodeList stringList = dictElement.getElementsByTagName("string");
+
+                for (int j=0; j<=keyList.getLength(); j++){
+
+                    if (keyList.item(j).getTextContent().matches("conditions")){
+                        Element array = (Element) dictElement.getElementsByTagName("array").item(0);
+                        Element innerDict = (Element) dictElement.getElementsByTagName("dict").item(0);
+
+                        NodeList innerKeyList =  innerDict.getElementsByTagName("key");
+                        NodeList innerStringList = innerDict.getElementsByTagName("String");
+
+                        // add to parsedgroups
+
+                    }
+
+                    else if (keyList.item(j).getTextContent().matches("group name")){
+                        String oldValue = meta.get("grouping");
+                        String groupName = stringList.item(0).getTextContent();
+                        meta.put("grouping", oldValue + "1 StaticGroup:"+ groupName +"\\;0\\;0\\;\\;\\;\\;;");
+                    }
+
+                    else if (keyList.item(j).getTextContent().matches("conjunction")){
+                        String conjunction =  dictElement.getElementsByTagName("Integer").item(0).getTextContent();
+                    }
+                }
+
+                //parsedGroups.put(groupName,citationKeys);
+            }
+        } catch (ParserConfigurationException | IOException | SAXException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     private void parseBibtexString() throws IOException {
         BibtexString bibtexString = parseString();
