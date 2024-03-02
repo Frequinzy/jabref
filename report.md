@@ -29,6 +29,8 @@ For each team member, how much time was spent in
 - Meeting 5: check-in on progress and delegating next tasks (15m)
 - Meeting 6: check-in on progress and discussing final steps to complete requirement 1 (30m)
 - Meeting 7: discuss and delegate final tasks (45m)
+- Meeting 8: check-in on final tasks (30m)
+- Meeting 9: wrapping up
 
 2. discussions within parts of the group;
 
@@ -136,7 +138,9 @@ Add support for importing reference libraries from BibDesk, another reference ma
 
 Scope (functionality and code affected).
 
-**TODO** 
+The main class affected by the changes is the `BibtexParser` class. 
+For parsing groups, an additional case is added to the `parseJabRefComment` function to detect BibDesk comments. New functions `parseBibDeskComment` and `addBibDeskGroupEntriesToJabRefGroups` are added to parse these comments and create the JabRef groups.
+For decoding linked files ... **TODO** 
 
 ## Requirements for the new feature or requirements affected by functionality being refactored
 
@@ -158,16 +162,16 @@ BibDesk stores linked files in reference fields called `bdsk-file-x`. The field 
 
 Optional (point 3): trace tests to requirements.
 
-1. BibtexParserTest:integrationTestBibDeskStaticGroup traces to requirement 1 (Import BibDesk Static Groups to JabRef)
-2. BibtexParserTest:integrationTestBibDeskSmartGroup traces to requirement 2 (Import BibDesk Smart Groups to JabRef)
-3. BibtexParserTest:integrationTestBibDeskMultipleGroup traces to requirement 3 (Import Multiple BibDesk Group Types to JabRef)
-4. BibtexParserTest:... traces to requirement 4 (Convert BibDesk Linked Files to Proper Format)
+1. `BibtexParserTest:integrationTestBibDeskStaticGroup` traces to requirement 1 (Import BibDesk Static Groups to JabRef)
+2. `BibtexParserTest:integrationTestBibDeskSmartGroup` traces to requirement 2 (Import BibDesk Smart Groups to JabRef)
+3. `BibtexParserTest:integrationTestBibDeskMultipleGroup` traces to requirement 3 (Import Multiple BibDesk Group Types to JabRef)
+4. `BibtexParserTest:...` traces to requirement 4 (Convert BibDesk Linked Files to Proper Format)
 
 ## Code changes
 
 ### Patch
 
-git diff main bibDeskImport
+`git diff main bibDeskImport`
 
 Optional (point 4): the patch is clean.
 
@@ -192,11 +196,42 @@ Optional (point 1): Architectural overview.
 
 What are your main take-aways from this project? What did you learn?
 
-**TODO**
+In this project we have learned a lot about how open-source contribution works in practice and how much goes into issue resolution besides writing the code itself. For example, understanding the issue (in our case a requested feature) and formulating good requirements from its description as well as reading documentation and understanding the architecture, purpose, and functionality of the overall system are also important parts of the process.
 
 How did you grow as a team, using the Essence standard to evaluate yourself?
 
-**TODO**
+According to the Essence standard checklist our way of working has progressed from In Place to next state Working Well since the previous assignment. To complete this issue resolution task, we for example got to practice using and adapting our way-of-working to suit the current context since the nature of the assignment was quite different from the previous ones. We have well-established practices such as using our issue tracker and pull requests on Github as well as for communicating and supporting each other with our tasks. We also continually tune our use of practices and tools. In this assignment, for example, we switched from Maven to Gradle for building and testing.
 
 Optional (point 6): How would you put your work in context with best software engineering practice?
 
+The benefits, drawbacks, and limitations of our work can be discussed in terms of the SEMAT (Software Engineering Method and Theory) kernel alphas, activity spaces, and competencies in each of the three areas of concern (Customer, Solution, Endeavor). The kernel provides a common ground for best software engineering practices.
+
+**Customer**
+- Alphas: opportunity, stakeholder
+- Activity spaces: explore possibilities, understand stakeholder needs, ensure stakeholder satisfaction, use system
+- Competencies: stakeholder representation
+
+The _opportunity_ and _stakeholder_ needs for our work were presented in the form of a Github issue on the project repository, which expressed a desire for a new feature for the system.
+Focusing on the activity spaces _exploring possibilities_ and _understanding stakeholder needs_ played an important role, particularly in the early stages of our work, and helped put us on the right track for planning and carrying out the work itself.
+A limitation of our work is that it is somewhat lacking in _stakeholder representation_ since the only communication with the stakeholder was through the language of the initial issue. Having more communication would have helped with _ensuring stakeholder satisfaction_ and sorting out vagueness and underspecification regarding certain details in the request.
+
+**Solution**
+- Alphas: requirements, software system
+- Activity spaces: understand requirements, shape system, implement system, test system, deploy system, operate system
+- Competencies: analysis, development, testing
+
+Our work in the _Solution_ area of concern greatly benefitted from following the SEMAT practice. We spent a lot of time in the beginning _understanding the requirements_. This involved figuring out more concretely what was needed of the _software system_ to satisfy the _opportunity_ and _stakeholders_.
+For example, the issue only asked to be able to import BibDesk groups to JabRef, but there are many types of groups in BibDesk and we found that not all were relevant for this problem. 
+Taking the time to do this allowed for a significantly smoother and more effective process in the later stages of _shaping_, _implementing_, and _testing_ the system.
+Unfortunately, we ran out of time to finish developing the system according to all the requirements and therefore did not get the chance to _test_ the full system or _deploy_ it.
+Also, due to the lack of further communication with stakeholders beyond the original issue, we cannot be sure if our full set of _requirements_ accurately represent the needs and if the resulting _implementation_ would fully solve the customer problem.
+
+**Endeavor**
+- Alphas: work, team, way of working
+- Activity spaces: prepare to do work, coordinate activity, support team, track progress, stop work
+- Competencies: leadership, management
+
+The alphas, activity spaces, and competencies in the _Endeavor_ area of concern have played a useful role in our work throughout all the assignments in this course.
+In this assignment, the nature of the task made the activity spaces _preparing to do the work_, _coordinate activity_, _support team_, and _track progress_ particularly valuable for creating an efficient workflow.
+We had many meetings throughout to decide how to divide the work and delegate smaller subtasks as well as for progress check-ins. We also have designated Discord channels for assignment help, links and resources, et cetera which has helped us with communication.
+The benefits of working in this way have been numerous. For example, it has ensured that everyone can make meaningful contributions both through working on tasks individually and being able to give and receive support to/from other group members. It has also helped us troubleshoot and work through obstacles more efficiently.
