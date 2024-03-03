@@ -6,7 +6,6 @@ import java.io.PushbackReader;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.Collection;
 import java.util.Deque;
@@ -20,10 +19,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Pattern;
-import com.dd.plist.NSObject;
-import com.dd.plist.NSDictionary;
-import com.dd.plist.NSString;
-import com.dd.plist.BinaryPropertyListParser;
 
 import org.jabref.logic.bibtex.FieldContentFormatter;
 import org.jabref.logic.bibtex.FieldWriter;
@@ -52,6 +47,9 @@ import org.jabref.model.metadata.MetaData;
 import org.jabref.model.util.DummyFileUpdateMonitor;
 import org.jabref.model.util.FileUpdateMonitor;
 
+import com.dd.plist.BinaryPropertyListParser;
+import com.dd.plist.NSDictionary;
+import com.dd.plist.NSString;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -632,16 +630,15 @@ public class BibtexParser implements Parser {
                     entry.addKeyword(content, importFormatPreferences.bibEntryPreferences().getKeywordSeparator());
                 }
             } else {
-                //TODO: change content here?
-                if(field.getName().length() > 10 && field.getName().substring(0, 10).equals("bdsk-file-")) {
+                // If a BibDesk File Field is encountered
+                if (field.getName().length() > 10 && field.getName().substring(0, 10).equals("bdsk-file-")) {
                     byte[] decodedBytes = Base64.getDecoder().decode(content);
                     try {
+                        // Parse the base64 encoded binary plist to get the relative (to the .bib file) path
                         NSDictionary plist = (NSDictionary) BinaryPropertyListParser.parse(decodedBytes);
                         NSString relativePath = (NSString) plist.objectForKey("relativePath");
-                        // Creates a relative path to the .bib file. Should maybe try to make it absolute
-                        // or look at how they create references.
-                        Path path = Paths.get(relativePath.getContent());
-                        // We should get the fileType and also look at what should be in the description.
+                        Path path = Path.of(relativePath.getContent());
+
                         LinkedFile file = new LinkedFile("", path, "");
                         entry.addFile(file);
                     } catch (Exception e) {
