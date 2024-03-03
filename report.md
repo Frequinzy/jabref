@@ -4,7 +4,7 @@ Name: JabRef
 
 URL: https://github.com/JabRef/jabref
 
-A reference management tool allowing users to collect, organize, and search for bibliographic information. 
+A reference management tool allowing users to collect, organize, and search for bibliographic information.
 
 ## Onboarding experience
 
@@ -30,11 +30,12 @@ For each team member, how much time was spent in
 - Meeting 6: check-in on progress and discussing final steps to complete requirement 1 (30m)
 - Meeting 7: discuss and delegate final tasks (45m)
 - Meeting 8: check-in on final tasks (30m)
-- Meeting 9: wrapping up
+- Meeting 9: wrapping up (60m)
 
 2. discussions within parts of the group;
 
 Anna
+- help Lotta and Filippa with writing and debugging code for requirement 1 (60m)
 
 Emil
 
@@ -47,6 +48,9 @@ Tianning
 3. reading documentation;
 
 Anna
+- understanding key functionality related to issue (60m)
+- group types in JabRef/BibDesk and how they are stored in file (60m)
+- exploring possibilities for creating equivalent JabRef group from BibDesk Smart group (60m)
 
 Emil
 
@@ -59,6 +63,9 @@ Tianning
 4. configuration and setup;
 
 Anna
+- searching for project and issue (60m)
+- configuring local workspace (30m)
+- resolving test failures due to missing CSL style files (30m)
 
 Emil
 
@@ -71,6 +78,9 @@ Tianning
 5. analyzing code/output;
 
 Anna
+- understand how JabRef handles basic group imports (60m)
+- understand JabRef testing conventions and planning new tests accordingly (60m)
+- code review (60m)
 
 Emil
 
@@ -83,6 +93,9 @@ Tianning
 6. writing documentation;
 
 Anna
+- writing requirements (60m)
+- first draft of report (60m)
+- SEMAT section of report (30m)
 
 Emil
 
@@ -95,6 +108,9 @@ Tianning
 7. writing code;
 
 Anna
+- writing test for requirement 1 (60m)
+- writing tests for requirements 2 and 3 (60m)
+- experimenting with how to adapt parsing code for static groups to smart groups (60m)
 
 Emil
 
@@ -107,6 +123,10 @@ Tianning
 8. running code?
 
 Anna
+- understand flow of normal JabRef group imports (60m)
+- verifying test assertions work as intended on equivalent JabRef formatted group import (30m)
+- verifying passing test and correct practical use of requirement 1 implementation (30m)
+- checking and trying to fix so new tests executed as part of full test suite (60m)
 
 Emil
 
@@ -119,6 +139,7 @@ Tianning
 9. in total?
 
 Anna
+- 18h individual + 5.75h meetings = 23.75h
 
 Emil
 
@@ -140,7 +161,7 @@ Scope (functionality and code affected).
 
 The main class affected by the changes is the `BibtexParser` class. 
 For parsing groups, an additional case is added to the `parseJabRefComment` function to detect BibDesk comments. New functions `parseBibDeskComment` and `addBibDeskGroupEntriesToJabRefGroups` are added to parse these comments and create the JabRef groups.
-For decoding linked files ... **TODO** 
+For decoding linked files an additional case is added to the `parseField` function to identify `bdsk-file-x` fields and decode their content.
 
 ## Requirements for the new feature or requirements affected by functionality being refactored
 
@@ -158,14 +179,14 @@ A BibDesk library may contain several groups of different types. Information abo
 
 4. Convert BibDesk Linked Files to Proper Format
 
-BibDesk stores linked files in reference fields called `bdsk-file-x`. The field includes a base64-encoded binary plist containing the relative path and metadata that macOS uses to keep track of a file in case it is moved. The JabRef importer should decode such fields and translate the field name and contents according to the conventions of the corresponding JabRef field `file`.
+BibDesk stores linked files in reference fields called `bdsk-file-x`. The field includes a base64-encoded binary plist containing the relative path and metadata that macOS uses to keep track of a file in case it is moved. The JabRef importer should decode such fields and translate the contents to the appropriate format for JabRef.
 
 Optional (point 3): trace tests to requirements.
 
 1. `BibtexParserTest:integrationTestBibDeskStaticGroup` traces to requirement 1 (Import BibDesk Static Groups to JabRef)
 2. `BibtexParserTest:integrationTestBibDeskSmartGroup` traces to requirement 2 (Import BibDesk Smart Groups to JabRef)
 3. `BibtexParserTest:integrationTestBibDeskMultipleGroup` traces to requirement 3 (Import Multiple BibDesk Group Types to JabRef)
-4. `BibtexParserTest:...` traces to requirement 4 (Convert BibDesk Linked Files to Proper Format)
+4. `BibtexParserTest:parseBibDeskLinkedFiles` traces to requirement 4 (Convert BibDesk Linked Files to Proper Format)
 
 ## Code changes
 
