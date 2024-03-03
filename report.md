@@ -186,9 +186,25 @@ refactoring).
 
 ### Key changes/classes affected
 
-**TODO**
-
 Optional (point 1): Architectural overview.
+#### Purpose
+
+
+JabRef is an open-source reference manager designed for managing and organizing bibliographic databases.
+
+#### Architecture
+
+
+The Jabref main page consists of multiple folders and documents, with the code located in the src folder. This is the organization of the src folder.
+
+![image](JabRef.src.png)
+
+In addition, particular function implementations can be found in the [java.org/jabref](http://java.org/jabref) section located under the main folder. Here is its structure:
+
+![image](orgjabref.png)
+
+For each layer, JabRef forms packages according to their responsibility, i.e., vertical structuring. The model should have no dependencies on other classes of JabRef and the logic should only depend on model classes.
+
 
 **TODO**
 
