@@ -197,11 +197,9 @@ Optional (point 3): trace tests to requirements.
 Optional (point 4): the patch is clean.
 
 ## Test results
+Test logs for tests before changes: [here](https://htmlpreview.github.io/?https://github.com/Frequinzy/jabref/blob/report/test_before/index.html)
 
-Overall results with link to a copy or excerpt of the logs (before/after
-refactoring).
-
-**TODO**
+Test logs for tests after changes: [here](https://htmlpreview.github.io/?https://github.com/Frequinzy/jabref/blob/report/test_after/index.html)
 
 ## UML class diagram and its description
 
