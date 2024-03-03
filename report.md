@@ -189,8 +189,22 @@ refactoring).
 Optional (point 1): Architectural overview.
 #### Purpose
 
-
 JabRef is an open-source reference manager designed for managing and organizing bibliographic databases.
+
+It provides three main functions to effectively manage the references:
+
+1. import/export
+
+JabRef streamlines reference management with over 15 supported formats for easy import, efficient retrieval of full-text articles, and seamless extraction of metadata from PDFs. The one-click browser extension simplifies new reference imports. JabRef also excels in sharing, offering multiple export options, including a library saved in a text file format. This format ensures convenient sharing via Dropbox and compatibility with version control.
+
+2. generate citation
+
+JabRef simplifies citation generation with native BibTeX and Biblatex support, cite-as-you-write functionality in various external applications, and the flexibility to format references using built-in styles or create custom ones. Seamless integration with Word and LibreOffice/OpenOffice facilitates easy citation insertion and formatting.
+
+3. organize
+
+JabRef offers comprehensive research organization tools, including hierarchical collections, keyword tagging, and manual assignments. Its advanced search, bibliographic data correction, and customizable features streamline research management. Users can customize citation keys, metadata fields, and reference types, find and merge duplicates, and attach diverse documents. Automated rules for renaming and moving files enhance efficiency. JabRef also supports tracking reading progress with features like ranking, priority, and quality assurance.
+
 
 #### Architecture
 
@@ -205,8 +219,6 @@ In addition, particular function implementations can be found in the [java.org/j
 
 For each layer, JabRef forms packages according to their responsibility, i.e., vertical structuring. The model should have no dependencies on other classes of JabRef and the logic should only depend on model classes.
 
-
-**TODO**
 
 ## Overall experience
 
