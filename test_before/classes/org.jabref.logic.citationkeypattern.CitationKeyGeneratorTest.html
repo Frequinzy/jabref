@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CitationKeyGeneratorTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CitationKeyGeneratorTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.jabref.logic.citationkeypattern.html">org.jabref.logic.citationkeypattern</a> &gt; CitationKeyGeneratorTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">124</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.331s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">allAuthors()</td>
+<td class="success">allAuthors()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">andAuthorNames()</td>
+<td class="success">andAuthorNames()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">andInAuthorName()</td>
+<td class="success">andInAuthorName()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">applyModifiers()</td>
+<td class="success">applyModifiers()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">authAuthEa()</td>
+<td class="success">authAuthEa()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">authEaEmptyReturnsEmpty()</td>
+<td class="success">authEaEmptyReturnsEmpty()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">authEtAl()</td>
+<td class="success">authEtAl()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">authIniN()</td>
+<td class="success">authIniN()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">authIniNEmptyReturnsEmpty()</td>
+<td class="success">authIniNEmptyReturnsEmpty()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">authNM()</td>
+<td class="success">authNM()</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">authShort()</td>
+<td class="success">authShort()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">authShortEmptyReturnsEmpty()</td>
+<td class="success">authShortEmptyReturnsEmpty()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] New, @misc{,
+  author = {I. Newton},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, [authorsAlpha]</td>
+<td class="success">authorsAlpha(String, BibEntry, String)[1]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] NM, @misc{,
+  author = {I. Newton and J. Maxwell},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, [authorsAlpha]</td>
+<td class="success">authorsAlpha(String, BibEntry, String)[2]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] NME, @misc{,
+  author = {I. Newton and J. Maxwell and A. Einstein},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, [authorsAlpha]</td>
+<td class="success">authorsAlpha(String, BibEntry, String)[3]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] NMEB, @misc{,
+  author = {I. Newton and J. Maxwell and A. Einstein and N. Bohr},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, [authorsAlpha]</td>
+<td class="success">authorsAlpha(String, BibEntry, String)[4]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[5] NME+, @misc{,
+  author = {I. Newton and J. Maxwell and A. Einstein and N. Bohr and Harry Unknown},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, [authorsAlpha]</td>
+<td class="success">authorsAlpha(String, BibEntry, String)[5]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[6] vdAal, @misc{,
+  author = {Wil van der Aalst},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, [authorsAlpha]</td>
+<td class="success">authorsAlpha(String, BibEntry, String)[6]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[7] vdAvL, @misc{,
+  author = {Wil van der Aalst and Tammo van Lessen},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, [authorsAlpha]</td>
+<td class="success">authorsAlpha(String, BibEntry, String)[7]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[8] NM+, @misc{,
+  author = {Isaac Newton and James Maxwell and others},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, [authorsAlpha]</td>
+<td class="success">authorsAlpha(String, BibEntry, String)[8]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">camel()</td>
+<td class="success">camel()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=ÃãẼẽĨĩÑñÕõŨũỸỹ, expectedResult=AaEeIiNnOoUuYy</td>
+<td class="success">checkLegalKey(String, String)[10]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ḍ ḍ Ḥ ḥ Ḷ ḷ Ḹ ḹ Ṃ ṃ Ṇ ṇ Ṛ ṛ Ṝ ṝ Ṣ ṣ Ṭ ṭ, expectedResult=DdHhLlLlMmNnRrRrSsTt</td>
+<td class="success">checkLegalKey(String, String)[11]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=À à È è Ì ì Ò ò Ù ù   Â â Ĉ ĉ Ê ê Ĝ ĝ Ĥ ĥ Î î Ĵ ĵ Ô ô Ŝ ŝ Û û Ŵ ŵ Ŷ ŷ  Ä ä Ë ë Ï ï Ö ö Ü ü Ÿ ÿ    , expectedResult=AaEeIiOoUuAaCcEeGgHhIiJjOoSsUuWwYyAeaeEeIiOeoeUeueYy</td>
+<td class="success">checkLegalKey(String, String)[12]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ã ã Ẽ ẽ Ĩ ĩ Ñ ñ Õ õ Ũ ũ Ỹ ỹ   Ç ç Ģ ģ Ķ ķ Ļ ļ Ņ ņ Ŗ ŗ Ş ş Ţ ţ, expectedResult=AaEeIiNnOoUuYyCcGgKkLlNnRrSsTt</td>
+<td class="success">checkLegalKey(String, String)[13]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents= Ǎ ǎ Č č Ď ď Ě ě Ǐ ǐ Ľ ľ Ň ň Ǒ ǒ Ř ř Š š Ť ť Ǔ ǔ Ž ž   , expectedResult=AaCcDdEeIiLlNnOoRrSsTtUuZz</td>
+<td class="success">checkLegalKey(String, String)[14]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ā ā Ē ē Ī ī Ō ō Ū ū Ȳ ȳ, expectedResult=AaEeIiOoUuYy</td>
+<td class="success">checkLegalKey(String, String)[15]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ă ă Ĕ ĕ Ğ ğ Ĭ ĭ Ŏ ŏ Ŭ ŭ   , expectedResult=AaEeGgIiOoUu</td>
+<td class="success">checkLegalKey(String, String)[16]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ả ả Ẻ ẻ Ỉ ỉ Ỏ ỏ Ủ ủ Ỷ ỷ, expectedResult=AaEeIiOoUuYy</td>
+<td class="success">checkLegalKey(String, String)[17]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ḛ ḛ Ḭ ḭ Ṵ ṵ, expectedResult=EeIiUu</td>
+<td class="success">checkLegalKey(String, String)[18]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ċ ċ Ė ė Ġ ġ İ ı Ż ż   Ą ą Ę ę Į į Ǫ ǫ Ų ų   , expectedResult=CcEeGgIiZzAaEeIiOoUu</td>
+<td class="success">checkLegalKey(String, String)[19]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=ÀàÈèÌìÒòÙù Â â Ĉ ĉ Ê ê Ĝ ĝ Ĥ ĥ Î î Ĵ ĵ Ô ô Ŝ ŝ Û û Ŵ ŵ Ŷ ŷ, expectedResult=AaEeIiOoUuAaCcEeGgHhIiJjOoSsUuWwYy</td>
+<td class="success">checkLegalKey(String, String)[1]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ḍ ḍ Ḥ ḥ Ḷ ḷ Ḹ ḹ Ṃ ṃ Ṇ ṇ Ṛ ṛ Ṝ ṝ Ṣ ṣ Ṭ ṭ   , expectedResult=DdHhLlLlMmNnRrRrSsTt</td>
+<td class="success">checkLegalKey(String, String)[20]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=ÄäËëÏïÖöÜüŸÿ, expectedResult=AeaeEeIiOeoeUeueYy</td>
+<td class="success">checkLegalKey(String, String)[2]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=ÅåŮů, expectedResult=AaaaUu</td>
+<td class="success">checkLegalKey(String, String)[3]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ç ç Ģ ģ Ķ ķ Ļ ļ Ņ ņ Ŗ ŗ Ş ş Ţ ţ, expectedResult=CcGgKkLlNnRrSsTt</td>
+<td class="success">checkLegalKey(String, String)[4]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ă ă Ĕ ĕ Ğ ğ Ĭ ĭ Ŏ ŏ Ŭ ŭ, expectedResult=AaEeGgIiOoUu</td>
+<td class="success">checkLegalKey(String, String)[5]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ċ ċ Ė ė Ġ ġ İ ı Ż ż, expectedResult=CcEeGgIiZz</td>
+<td class="success">checkLegalKey(String, String)[6]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ą ą Ę ę Į į Ǫ ǫ Ų ų, expectedResult=AaEeIiOoUu</td>
+<td class="success">checkLegalKey(String, String)[7]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ā ā Ē ē Ī ī Ō ō Ū ū Ȳ ȳ, expectedResult=AaEeIiOoUuYy</td>
+<td class="success">checkLegalKey(String, String)[8]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">accents=Ǎ ǎ Č č Ď ď Ě ě Ǐ ǐ Ľ ľ Ň ň Ǒ ǒ Ř ř Š š Ť ť Ǔ ǔ Ž ž, expectedResult=AaCcDdEeIiLlNnOoRrSsTtUuZz</td>
+<td class="success">checkLegalKey(String, String)[9]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">checkLegalKeyNoUnwantedCharacters()</td>
+<td class="success">checkLegalKeyNoUnwantedCharacters()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">checkLegalKeyUnwantedCharacters()</td>
+<td class="success">checkLegalKeyUnwantedCharacters()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">checkLegalNullInNullOut()</td>
+<td class="success">checkLegalNullInNullOut()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">crossrefAndAuthorNames()</td>
+<td class="success">crossrefAndAuthorNames()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">crossrefAndInAuthorNames()</td>
+<td class="success">crossrefAndInAuthorNames()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">crossrefDepartment()</td>
+<td class="success">crossrefDepartment()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">crossrefInstituteOfTechnology()</td>
+<td class="success">crossrefInstituteOfTechnology()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">crossrefSchool()</td>
+<td class="success">crossrefSchool()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">crossrefShorttitle()</td>
+<td class="success">crossrefShorttitle()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">crossrefShorttitleInitials()</td>
+<td class="success">crossrefShorttitleInitials()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">crossrefUniversity()</td>
+<td class="success">crossrefUniversity()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">crossrefkeywordNKeywordsSeparatedBySpace()</td>
+<td class="success">crossrefkeywordNKeywordsSeparatedBySpace()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">crossrefkeywordsNKeywordsSeparatedBySpace()</td>
+<td class="success">crossrefkeywordsNKeywordsSeparatedBySpace()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">department()</td>
+<td class="success">department()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">firstAuthor()</td>
+<td class="success">firstAuthor()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">firstAuthorForenameInitials()</td>
+<td class="success">firstAuthorForenameInitials()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">firstAuthorVonAndLast()</td>
+<td class="success">firstAuthorVonAndLast()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">firstAuthorVonAndLastNoVonInName()</td>
+<td class="success">firstAuthorVonAndLastNoVonInName()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">firstPage()</td>
+<td class="success">firstPage()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">firstPageNull()</td>
+<td class="success">firstPageNull()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyAbbreviateCorporateAuthorDepartmentWithoutAcademicInstitute()</td>
+<td class="success">generateKeyAbbreviateCorporateAuthorDepartmentWithoutAcademicInstitute()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyAbbreviateCorporateAuthorSchoolWithoutAcademicInstitute()</td>
+<td class="success">generateKeyAbbreviateCorporateAuthorSchoolWithoutAcademicInstitute()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyCorrectKeyLengthWithAuthNofMthAndUnicode()</td>
+<td class="success">generateKeyCorrectKeyLengthWithAuthNofMthAndUnicode()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyCorrectKeyLengthWithTruncateModifierAndUnicode()</td>
+<td class="success">generateKeyCorrectKeyLengthWithTruncateModifierAndUnicode()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyCorrectKeyWithAndOthersAtTheEnd()</td>
+<td class="success">generateKeyCorrectKeyWithAndOthersAtTheEnd()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyDoesNotModifyTheKeyWithIncorrectRegexReplacement()</td>
+<td class="success">generateKeyDoesNotModifyTheKeyWithIncorrectRegexReplacement()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyStripsApostropheFromTitle()</td>
+<td class="success">generateKeyStripsApostropheFromTitle()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyStripsColonFromTitle()</td>
+<td class="success">generateKeyStripsColonFromTitle()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithAuthUpperYearShortTitleCapitalizeModifier()</td>
+<td class="success">generateKeyWithAuthUpperYearShortTitleCapitalizeModifier()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithFallbackField()</td>
+<td class="success">generateKeyWithFallbackField()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithLowercaseAuthorLastnameUseVonPart()</td>
+<td class="success">generateKeyWithLowercaseAuthorLastnameUseVonPart()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithLowercaseAuthorWithVonAndLastname()</td>
+<td class="success">generateKeyWithLowercaseAuthorWithVonAndLastname()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithMinusInCitationStyleOutsideAField()</td>
+<td class="success">generateKeyWithMinusInCitationStyleOutsideAField()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithModifierContainingRegexCharacterClass()</td>
+<td class="success">generateKeyWithModifierContainingRegexCharacterClass()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithNonNormalizedUnicode()</td>
+<td class="success">generateKeyWithNonNormalizedUnicode()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithOneModifier()</td>
+<td class="success">generateKeyWithOneModifier()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithShortTitleCapitalizeModifier()</td>
+<td class="success">generateKeyWithShortTitleCapitalizeModifier()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithShortTitleTitleCaseModifier()</td>
+<td class="success">generateKeyWithShortTitleTitleCaseModifier()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithTitleCapitalizeModifier()</td>
+<td class="success">generateKeyWithTitleCapitalizeModifier()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithTitleSentenceCaseModifier()</td>
+<td class="success">generateKeyWithTitleSentenceCaseModifier()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithTitleTitleCaseModifier()</td>
+<td class="success">generateKeyWithTitleTitleCaseModifier()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithTwoModifiers()</td>
+<td class="success">generateKeyWithTwoModifiers()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithWithFirstNCharacters()</td>
+<td class="success">generateKeyWithWithFirstNCharacters()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateKeyWithYearAuthUpperTitleSentenceCaseModifier()</td>
+<td class="success">generateKeyWithYearAuthUpperTitleSentenceCaseModifier()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">instituteOfTechnology()</td>
+<td class="success">instituteOfTechnology()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">keywordNKeywordsSeparatedBySpace()</td>
+<td class="success">keywordNKeywordsSeparatedBySpace()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">keywordsNKeywordsSeparatedBySpace()</td>
+<td class="success">keywordsNKeywordsSeparatedBySpace()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">lastAuthor()</td>
+<td class="success">lastAuthor()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">lastAuthorForenameInitials()</td>
+<td class="success">lastAuthorForenameInitials()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">lastPage()</td>
+<td class="success">lastPage()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">lastPageNull()</td>
+<td class="success">lastPageNull()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Úöning}, year={2000}}, expectedResult=Uoe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[10]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Ýöning}, year={2000}}, expectedResult=Yoe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[11]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Źöning}, year={2000}}, expectedResult=Zoe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[12]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Àöning}, year={2000}}, expectedResult=Aoe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[13]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Èöning}, year={2000}}, expectedResult=Eoe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[14]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Ìöning}, year={2000}}, expectedResult=Ioe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[15]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Òöning}, year={2000}}, expectedResult=Ooe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[16]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Ùöning}, year={2000}}, expectedResult=Uoe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[17]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Oraib Al-Ketan}, year={2000}}, expectedResult=AlK</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[18]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andrés D'Alessandro}, year={2000}}, expectedResult=DAl</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[19]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Köning}, year={2000}}, expectedResult=Koe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[1]</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andrés Aʹrnold}, year={2000}}, expectedResult=Arn</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[20]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Áöning}, year={2000}}, expectedResult=Aoe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[2]</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Éöning}, year={2000}}, expectedResult=Eoe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[3]</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Íöning}, year={2000}}, expectedResult=Ioe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[4]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Ĺöning}, year={2000}}, expectedResult=Loe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[5]</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Ńöning}, year={2000}}, expectedResult=Noe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[6]</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Óöning}, year={2000}}, expectedResult=Ooe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[7]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Ŕöning}, year={2000}}, expectedResult=Roe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[8]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">bibtexString=@ARTICLE{kohn, author={Andreas Śöning}, year={2000}}, expectedResult=Soe</td>
+<td class="success">makeLabelAndCheckLegalKeys(String, String)[9]</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">nAuthors1()</td>
+<td class="success">nAuthors1()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">nAuthors1EmptyReturnEmpty()</td>
+<td class="success">nAuthors1EmptyReturnEmpty()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">nAuthors3()</td>
+<td class="success">nAuthors3()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">oneAuthorPlusIni()</td>
+<td class="success">oneAuthorPlusIni()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pagePrefix()</td>
+<td class="success">pagePrefix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">pagePrefixNull()</td>
+<td class="success">pagePrefixNull()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">school()</td>
+<td class="success">school()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shortTitle()</td>
+<td class="success">shortTitle()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">specialLatexCharacterInAuthorName()</td>
+<td class="success">specialLatexCharacterInAuthorName()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">title()</td>
+<td class="success">title()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">university()</td>
+<td class="success">university()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">veryShortTitle()</td>
+<td class="success">veryShortTitle()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>2024-03-03 21:32:47 [ForkJoinPool-1-worker-1] org.jabref.logic.citationkeypattern.CitationKeyGenerator.replaceWithRegex()
+WARN: There is a syntax error in the regular expression &quot;[&quot; used to generate a citation key: java.util.regex.PatternSyntaxException: Unclosed character class near index 0
+[
+^
+	at java.base/java.util.regex.Pattern.error(Pattern.java:2204)
+	at java.base/java.util.regex.Pattern.clazz(Pattern.java:2869)
+	at java.base/java.util.regex.Pattern.sequence(Pattern.java:2315)
+	at java.base/java.util.regex.Pattern.expr(Pattern.java:2245)
+	at java.base/java.util.regex.Pattern.compile(Pattern.java:1945)
+	at java.base/java.util.regex.Pattern.&lt;init&gt;(Pattern.java:1576)
+	at java.base/java.util.regex.Pattern.compile(Pattern.java:1101)
+	at java.base/java.lang.String.replaceAll(String.java:3069)
+	at org.jabref.logic.citationkeypattern.CitationKeyGenerator.replaceWithRegex(CitationKeyGenerator.java:164)
+	at org.jabref.logic.citationkeypattern.CitationKeyGenerator.generateKey(CitationKeyGenerator.java:106)
+	at org.jabref.logic.citationkeypattern.CitationKeyGeneratorTest.generateKeyDoesNotModifyTheKeyWithIncorrectRegexReplacement(CitationKeyGeneratorTest.java:1031)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:202)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.executeNonConcurrentTasks(ForkJoinPoolHierarchicalTestExecutorService.java:172)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.invokeAll(ForkJoinPoolHierarchicalTestExecutorService.java:152)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:202)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.executeNonConcurrentTasks(ForkJoinPoolHierarchicalTestExecutorService.java:172)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.invokeAll(ForkJoinPoolHierarchicalTestExecutorService.java:152)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:202)
+	at java.base/java.util.concurrent.RecursiveAction.exec(RecursiveAction.java:194)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.6</a> at Mar 3, 2024, 9:37:34 PM</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - AuthorsTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>AuthorsTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.jabref.logic.layout.format.html">org.jabref.logic.layout.format</a> &gt; AuthorsTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">45</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.019s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">arg=FullName, formattedStr=Bob Croydon Bruce, Charles Manson, Jolly Jumper and Chuck Chuckles</td>
+<td class="success">authorABRV(String, String)[1]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=Initials, formattedStr=B. C. Bruce, C. Manson, J. Jumper and C. Chuckles</td>
+<td class="success">authorABRV(String, String)[2]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=FirstInitial, formattedStr=B. Bruce, C. Manson, J. Jumper and C. Chuckles</td>
+<td class="success">authorABRV(String, String)[3]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=MiddleInitial, formattedStr=Bob C. Bruce, Charles Manson, Jolly Jumper and Chuck Chuckles</td>
+<td class="success">authorABRV(String, String)[4]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=LastName, formattedStr=Bruce, Manson, Jumper and Chuckles</td>
+<td class="success">authorABRV(String, String)[5]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=InitialsNoSpace, formattedStr=B.C. Bruce, C. Manson, J. Jumper and C. Chuckles</td>
+<td class="success">authorABRV(String, String)[6]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=FirstFirst, formattedStr=B. C. Bruce, C. Manson, J. Jumper and C. Chuckles</td>
+<td class="success">authorOrder(String, String)[1]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=LastFirst, formattedStr=Bruce, B. C., Manson, C., Jumper, J. and Chuckles, C.</td>
+<td class="success">authorOrder(String, String)[2]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=LastFirstFirstFirst, formattedStr=Bruce, B. C., C. Manson, J. Jumper and C. Chuckles</td>
+<td class="success">authorOrder(String, String)[3]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=FullPunc, formattedStr=B. C. Bruce, C. Manson, J. Jumper and C. Chuckles</td>
+<td class="success">authorPUNC(String, String)[1]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=NoPunc, formattedStr=B C Bruce, C Manson, J Jumper and C Chuckles</td>
+<td class="success">authorPUNC(String, String)[2]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=NoComma, formattedStr=B. C. Bruce, C. Manson, J. Jumper and C. Chuckles</td>
+<td class="success">authorPUNC(String, String)[3]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=NoPeriod, formattedStr=B C Bruce, C Manson, J Jumper and C Chuckles</td>
+<td class="success">authorPUNC(String, String)[4]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=LastSep=|, formattedStr=B. C. Bruce, C. Manson, J. Jumper|C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[10]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=Comma, And, formattedStr=B. C. Bruce, C. Manson, J. Jumper and C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[11]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=Comma, Colon, formattedStr=B. C. Bruce, C. Manson, J. Jumper: C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[12]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=Comma, Semicolon, formattedStr=B. C. Bruce, C. Manson, J. Jumper; C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[13]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=Comma, formattedStr=B. C. Bruce, C. Manson, J. Jumper and C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[1]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=And, formattedStr=B. C. Bruce and C. Manson and J. Jumper and C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[2]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=Colon, formattedStr=B. C. Bruce: C. Manson: J. Jumper and C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[3]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=Semicolon, formattedStr=B. C. Bruce; C. Manson; J. Jumper and C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[4]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=Oxford, formattedStr=B. C. Bruce, C. Manson, J. Jumper, and C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[5]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=Amp, formattedStr=B. C. Bruce, C. Manson, J. Jumper &amp; C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[6]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=Sep, formattedStr=B. C. Bruce, C. Manson, J. Jumper and C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[7]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=LastSep, formattedStr=B. C. Bruce, C. Manson, J. Jumper and C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[8]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">arg=Sep=|, formattedStr=B. C. Bruce|C. Manson|J. Jumper and C. Chuckles</td>
+<td class="success">authorSEPARATORS(String, String)[9]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">emptyEtAl()</td>
+<td class="success">emptyEtAl()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">etAl()</td>
+<td class="success">etAl()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">etAlNotEnoughAuthors()</td>
+<td class="success">etAlNotEnoughAuthors()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">lastName()</td>
+<td class="success">lastName()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">middleInitial()</td>
+<td class="success">middleInitial()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">noPeriod()</td>
+<td class="success">noPeriod()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">specialEtAl()</td>
+<td class="success">specialEtAl()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">standardAmpFullName()</td>
+<td class="success">standardAmpFullName()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">standardCommaFullName()</td>
+<td class="success">standardCommaFullName()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">standardOxford()</td>
+<td class="success">standardOxford()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">standardOxfordFullName()</td>
+<td class="success">standardOxfordFullName()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">standardUsage()</td>
+<td class="success">standardUsage()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">standardUsageFive()</td>
+<td class="success">standardUsageFive()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">standardUsageFour()</td>
+<td class="success">standardUsageFour()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">standardUsageNull()</td>
+<td class="success">standardUsageNull()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">standardUsageOne()</td>
+<td class="success">standardUsageOne()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">standardUsageSix()</td>
+<td class="success">standardUsageSix()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">standardUsageThree()</td>
+<td class="success">standardUsageThree()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">standardUsageTwo()</td>
+<td class="success">standardUsageTwo()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.6</a> at Mar 3, 2024, 9:37:34 PM</p>
+</div>
+</div>
+</body>
+</html>

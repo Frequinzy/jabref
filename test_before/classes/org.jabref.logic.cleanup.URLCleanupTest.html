@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - URLCleanupTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>URLCleanupTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.jabref.logic.cleanup.html">org.jabref.logic.cleanup</a> &gt; URLCleanupTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">18</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.019s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">[10] @misc{,
+  url = {http://☺.damowmow.com},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{http://☺.damowmow.com}},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[10]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[11] @misc{,
+  url = {http://-.~_!$&amp;'()*+,;=:%40:80%2f::::::@example.com},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{http://-.~_!$&amp;'()*+,;=:%40:80%2f::::::@example.com}},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[11]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[12] @misc{,
+  url = {https://www.example.com/foo/?bar=baz&amp;inga=42&amp;quux},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{https://www.example.com/foo/?bar=baz&amp;inga=42&amp;quux}},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[12]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[13] @misc{,
+  url = {https://www.example.com/foo/?bar=baz&amp;inga=42&amp;quux},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {https://www.example.com/foo/?bar=baz&amp;inga=42&amp;quux},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[13]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[14] @misc{,
+  url = {http://142.42.1.1:8080},
+  urldate = {2021-01-15},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{http://142.42.1.1:8080}, accessed on January 15, 2021},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[14]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[15] @misc{,
+  note = {Accessed on 2015-01-15},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {Accessed on 2015-01-15},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[15]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[16] @misc{,
+  note = {visited on February 12, 2017},
+  url = {http://142.42.1.1:8080},
+  urldate = {2021-01-15},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{http://142.42.1.1:8080}, accessed on January 15, 2021, visited on February 12, 2017},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[16]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[17] @misc{,
+  url = {http://142.42.1.1:8080},
+  urldate = {2015-01-15},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{http://142.42.1.1:8080}, visited on 2015.01.15},
+  urldate = {2015-01-15},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[17]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[18] @misc{,
+  note = {cited by Kramer},
+  url = {https://example.org},
+  urldate = {2023-04-11},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{https://example.org}, cited by Kramer, accessed on 2023-04-11},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[18]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] @misc{,
+  note = {this is a note},
+  url = {https://hdl.handle.net/10442/hedi/6089},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {this is a note, \url{https://hdl.handle.net/10442/hedi/6089}},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[1]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] @misc{,
+  note = {this is a note},
+  url = {https://hdl.handle.net/10442/hedi/6089},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{https://hdl.handle.net/10442/hedi/6089}, this is a note},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[2]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] @misc{,
+  note = {\url{http://142.42.1.1:8080}},
+  url = {https://hdl.handle.net/10442/hedi/6089},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{https://hdl.handle.net/10442/hedi/6089}, \url{http://142.42.1.1:8080}},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[3]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] @misc{,
+  url = {https://hdl.handle.net/10442/hedi/6089},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{https://hdl.handle.net/10442/hedi/6089}},
+  url = {https://hdl.handle.net/10442/hedi/6089},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[4]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[5] @misc{,
+  note = {cited by Kramer, 2002.},
+  url = {https://example.org},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{https://example.org}, cited by Kramer, 2002.},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[5]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[6] @misc{,
+  url = {https://hdl.handle.net/10442/hedi/6089},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{https://hdl.handle.net/10442/hedi/6089}},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[6]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[7] @misc{,
+  url = {http://hdl.handle.net/10442/hedi/6089},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{http://hdl.handle.net/10442/hedi/6089}},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[7]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[8] @misc{,
+  url = {http://userid:password@example.com:8080},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{http://userid:password@example.com:8080}},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[8]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[9] @misc{,
+  url = {http://142.42.1.1:8080},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, @misc{,
+  note = {\url{http://142.42.1.1:8080}},
+  _jabref_shared = {sharedId: -1, version: 1}
+}</td>
+<td class="success">changeURL(BibEntry, BibEntry)[9]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.6</a> at Mar 3, 2024, 9:37:34 PM</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CitationStyleGeneratorTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CitationStyleGeneratorTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.jabref.logic.citationstyle.html">org.jabref.logic.citationstyle</a> &gt; CitationStyleGeneratorTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">44</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.430s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">aCMCitation()</td>
+<td class="success">aCMCitation()</td>
+<td class="success">3.121s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">aPACitation()</td>
+<td class="success">aPACitation()</td>
+<td class="success">0.021s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[10] Foo, B. (n.d.). number. Bib(La)TeX Journal, 3number.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  journal = {Bib(La)TeX Journal},
+  number = {3number},
+  title = {number},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[10]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[11] Foo, B. (n.d.). issue + pages. Bib(La)TeX Journal, 9, 45–67.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  issue = {9},
+  journal = {Bib(La)TeX Journal},
+  pages = {45--67},
+  title = {issue + pages},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[11]</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[12] Foo, B. (n.d.). issue + number. Bib(La)TeX Journal, 3number.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  issue = {9issue},
+  journal = {Bib(La)TeX Journal},
+  number = {3number},
+  title = {issue + number},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[12]</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[13] Foo, B. (n.d.). issue + number + pages. Bib(La)TeX Journal, 3number, 45–67.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  issue = {9issue},
+  journal = {Bib(La)TeX Journal},
+  number = {3number},
+  pages = {45--67},
+  title = {issue + number + pages},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[13]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[14] Foo, B. (n.d.). number + pages. Bib(La)TeX Journal, 3number, Article 777.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  comment = {number + article-number WITH the word article instead of pagerange},
+  journal = {Bib(La)TeX Journal},
+  number = {3number},
+  pages = {Article 777},
+  title = {number + pages},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[14]</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[15] Foo, B. (n.d.). issue. Bib(La)TeX Journal, 9issue.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  issue = {9issue},
+  journal = {Bib(La)TeX Journal},
+  title = {issue},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[15]</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[16] Foo, B. (n.d.). number + pages. Bib(La)TeX Journal, 3number, 45–67.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  journal = {Bib(La)TeX Journal},
+  number = {3number},
+  pages = {45--67},
+  title = {number + pages},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[16]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[17] Foo, B. (n.d.). number + pages. BibTeX Journal, 3number, 777e23.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  comment = {number + article-number WITHOUT the word article instead of pagerange},
+  journal = {BibTeX Journal},
+  number = {3number},
+  pages = {777e23},
+  title = {number + pages},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[17]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[18] Foo, B. (n.d.). eid + issue + number + pages. BibTeX Journal, 3number, 45–67.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  eid = {6eid},
+  issue = {9issue},
+  journal = {BibTeX Journal},
+  number = {3number},
+  pages = {45--67},
+  title = {eid + issue + number + pages},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[18]</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[19] Foo, B. (n.d.). eid + issue. BibTeX Journal, 9issue, Article 6eid.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  eid = {Article 6eid},
+  issue = {9issue},
+  journal = {BibTeX Journal},
+  title = {eid + issue},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[19]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] [1]F. Last and J. Doe, no. 28.
+, BIBTEX, @article{,
+  author = {Last, First and
+Doe, Jane},
+  number = {28},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, ieee.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[1]</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[20] Foo, B. (n.d.). volume + issue + number + pages + eid. Bib(La)TeX Journal, 1(3number), Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {6eid},
+  issue = {9issue},
+  journaltitle = {Bib(La)TeX Journal},
+  number = {3number},
+  pages = {45--67},
+  title = {volume + issue + number + pages + eid},
+  volume = {1},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[20]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[21] Foo, B. (n.d.). volume + issue + pages + eid. Bib(La)TeX Journal, 1(9issue), Article Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {Article 6eid},
+  issue = {9issue},
+  journaltitle = {Bib(La)TeX Journal},
+  pages = {45--67},
+  title = {volume + issue + pages + eid},
+  volume = {1},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[21]</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[22] Foo, B. (n.d.). volume + number + pages + eid. Bib(La)TeX Journal, 1(3number), Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {6eid},
+  journaltitle = {Bib(La)TeX Journal},
+  number = {3number},
+  pages = {45--67},
+  title = {volume + number + pages + eid},
+  volume = {1},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[22]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[23] Foo, B. (n.d.). eid + issue. Bib(La)TeX Journal, 9issue, Article Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {Article 6eid},
+  issue = {9issue},
+  journaltitle = {Bib(La)TeX Journal},
+  title = {eid + issue},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[23]</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[24] Foo, B. (n.d.). eid + issue + pages. Bib(La)TeX Journal, 9issue, Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {6eid},
+  issue = {9issue},
+  journaltitle = {Bib(La)TeX Journal},
+  pages = {45--67},
+  title = {eid + issue + pages},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[24]</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[25] Foo, B. (n.d.). eid + issue + number. Bib(La)TeX Journal, 3number, Article Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {Article 6eid},
+  issue = {9issue},
+  journaltitle = {Bib(La)TeX Journal},
+  number = {3number},
+  title = {eid + issue + number},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[25]</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[26] Foo, B. (n.d.). eid + issue + number + pages. Bib(La)TeX Journal, 3number, Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {6eid},
+  issue = {9issue},
+  journaltitle = {Bib(La)TeX Journal},
+  number = {3number},
+  pages = {45--67},
+  title = {eid + issue + number + pages},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[26]</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[27] Foo, B. (n.d.). eid + pages. Bib(La)TeX Journal, Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {6eid},
+  journaltitle = {Bib(La)TeX Journal},
+  pages = {45--67},
+  title = {eid + pages},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[27]</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[28] Foo, B. (n.d.). eid. Bib(La)TeX Journal, Article Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {Article 6eid},
+  journaltitle = {Bib(La)TeX Journal},
+  title = {eid},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[28]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[29] Foo, B. (n.d.). volume + number + eid. Bib(La)TeX Journal, 1(3number), Article Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {Article 6eid},
+  journaltitle = {Bib(La)TeX Journal},
+  number = {3number},
+  title = {volume + number + eid},
+  volume = {1},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[29]</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] [1]F. Last and J. Doe, no. 7.
+, BIBLATEX, @article{,
+  author = {Last, First and
+Doe, Jane},
+  issue = {7},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, ieee.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[2]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[30] Foo, B. (n.d.). volume + pages + eid. Bib(La)TeX Journal, 1, Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {6eid},
+  journaltitle = {Bib(La)TeX Journal},
+  pages = {45--67},
+  title = {volume + pages + eid},
+  volume = {1},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[30]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[31] Foo, B. (n.d.). eid + number. Bib(La)TeX Journal, 3number, Article Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {Article 6eid},
+  journaltitle = {Bib(La)TeX Journal},
+  number = {3number},
+  title = {eid + number},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[31]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[32] Foo, B. (n.d.). eid + number + pages. Bib(La)TeX Journal, 3number, Article 6eid.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  eid = {6eid},
+  journaltitle = {Bib(La)TeX Journal},
+  number = {3number},
+  pages = {45--67},
+  title = {eid + number + pages},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[32]</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[33] Foo, B. (n.d.). issue + number. Bib(La)TeX Journal, 3number.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  issue = {9issue},
+  journaltitle = {Bib(La)TeX Journal},
+  number = {3number},
+  title = {issue + number},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[33]</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[34] Foo, B. (n.d.). issue + number + pages. Bib(La)TeX Journal, 3number, 45–67.
+, BIBLATEX, @article{,
+  author = {Foo, Bar},
+  issue = {9issue},
+  journaltitle = {Bib(La)TeX Journal},
+  number = {3number},
+  pages = {45--67},
+  title = {issue + number + pages},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[34]</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] [1]F. Last and J. Doe, no. 28.
+, BIBLATEX, @article{,
+  author = {Last, First and Doe, Jane},
+  number = {28},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, ieee.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[3]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] [1]F. Last and J. Doe, no. 28.
+, BIBLATEX, @article{,
+  author = {Last, First and
+Doe, Jane},
+  issue = {7},
+  number = {28},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, ieee.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[4]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[5] [1]F. Last and J. Doe, no. 7, Art. no. e0270533.
+, BIBLATEX, @article{,
+  author = {Last, First and
+Doe, Jane},
+  eid = {e0270533},
+  issue = {7},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, ieee.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[5]</td>
+<td class="success">0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[6] [1]F. Last and J. Doe, no. 33, pp. 7–8.
+, BIBLATEX, @article{,
+  author = {Last, First and
+Doe, Jane},
+  issue = {33},
+  pages = {7--8},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, ieee.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[6]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[7] Foo, B. (n.d.). volume + issue + number + pages. Bib(La)TeX Journal, 1(3number), 45–67.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  comment = {The issue field does not exist in Bibtex standard, therefore there is no need to render it (The issue field exists in biblatex standard though)},
+  issue = {9issue},
+  journal = {Bib(La)TeX Journal},
+  number = {3number},
+  pages = {45--67},
+  title = {volume + issue + number + pages},
+  volume = {1},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[7]</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[8] Foo, B. (n.d.). volume + issue + pages. Bib(La)TeX Journal, 1(9), 45–67.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  comment = {The issue field does not exist in Bibtex standard, therefore there is no need to render it (The issue field exists in biblatex standard though.). Since, for this entry, there is no number field present and therefore no data will be overwriten, enabling the user to be able to move the data within the issue field to the number field via cleanup action is something worth pursuing.},
+  issue = {9},
+  journal = {Bib(La)TeX Journal},
+  pages = {45--67},
+  title = {v…, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[8]</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[9] Foo, B. (n.d.). volume + pages. Bib(La)TeX Journal, 1, 45–67.
+, BIBTEX, @article{,
+  author = {Foo, Bar},
+  journal = {Bib(La)TeX Journal},
+  pages = {45--67},
+  title = {volume + pages},
+  volume = {1},
+  _jabref_shared = {sharedId: -1, version: 1}
+}, apa.csl</td>
+<td class="success">cslMapping(String, BibDatabaseMode, BibEntry, String)[9]</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">handleAmpersand()</td>
+<td class="success">handleAmpersand()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">handleCrossRefFields()</td>
+<td class="success">handleCrossRefFields()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">handleDiacritics()</td>
+<td class="success">handleDiacritics()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">htmlFormat()</td>
+<td class="success">htmlFormat()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">ignoreCarriageReturnNewLine()</td>
+<td class="success">ignoreCarriageReturnNewLine()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">ignoreNewLine()</td>
+<td class="success">ignoreNewLine()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">missingCitationStyle()</td>
+<td class="success">missingCitationStyle()</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">textFormat()</td>
+<td class="success">textFormat()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>2024-03-03 21:32:47 [ForkJoinPool-1-worker-1] org.jabref.logic.citationstyle.CitationStyleGenerator.generateCitations()
+ERROR: Could not generate BibEntry citation: java.io.FileNotFoundException: Could not find style in classpath: /faulty citation style.csl
+	at de.undercouch.citeproc.CSL.retrieveStyle(CSL.java:408)
+	at de.undercouch.citeproc.CSL.&lt;init&gt;(CSL.java:204)
+	at org.jabref.logic.citationstyle.CSLAdapter.initialize(CSLAdapter.java:64)
+	at org.jabref.logic.citationstyle.CSLAdapter.makeBibliography(CSLAdapter.java:47)
+	at org.jabref.logic.citationstyle.CitationStyleGenerator.generateCitations(CitationStyleGenerator.java:62)
+	at org.jabref.logic.citationstyle.CitationStyleGenerator.generateCitation(CitationStyleGenerator.java:52)
+	at org.jabref.logic.citationstyle.CitationStyleGenerator.generateCitation(CitationStyleGenerator.java:43)
+	at org.jabref.logic.citationstyle.CitationStyleGeneratorTest.missingCitationStyle(CitationStyleGeneratorTest.java:90)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:202)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.executeNonConcurrentTasks(ForkJoinPoolHierarchicalTestExecutorService.java:172)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.invokeAll(ForkJoinPoolHierarchicalTestExecutorService.java:152)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:202)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.executeNonConcurrentTasks(ForkJoinPoolHierarchicalTestExecutorService.java:172)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.invokeAll(ForkJoinPoolHierarchicalTestExecutorService.java:152)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:202)
+	at java.base/java.util.concurrent.RecursiveAction.exec(RecursiveAction.java:194)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+ANTLR Tool version 4.12.0 used for code generation does not match the current runtime version 4.13.1
+ANTLR Runtime version 4.12.0 used for parser compilation does not match the current runtime version 4.13.1
+ANTLR Tool version 4.12.0 used for code generation does not match the current runtime version 4.13.1
+ANTLR Runtime version 4.12.0 used for parser compilation does not match the current runtime version 4.13.1
+ANTLR Tool version 4.12.0 used for code generation does not match the current runtime version 4.13.1
+ANTLR Runtime version 4.12.0 used for parser compilation does not match the current runtime version 4.13.1
+ANTLR Tool version 4.12.0 used for code generation does not match the current runtime version 4.13.1
+ANTLR Runtime version 4.12.0 used for parser compilation does not match the current runtime version 4.13.1
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.6</a> at Mar 3, 2024, 9:37:34 PM</p>
+</div>
+</div>
+</body>
+</html>

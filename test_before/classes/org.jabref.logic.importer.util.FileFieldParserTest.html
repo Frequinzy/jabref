@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - FileFieldParserTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>FileFieldParserTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.jabref.logic.importer.util.html">org.jabref.logic.importer.util</a> &gt; FileFieldParserTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">30</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.009s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">[1] ParsedFileField{description='arXiv Fulltext PDF', link='https://arxiv.org/pdf/1109.0517.pdf', fileType='application/pdf'}, [arXiv Fulltext PDF, https://arxiv.org/pdf/1109.0517.pdf, application/pdf]</td>
+<td class="success">check(LinkedFile, List)[1]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] ParsedFileField{description='arXiv Fulltext PDF', link='https/://arxiv.org/pdf/1109.0517.pdf', fileType='application/pdf'}, [arXiv Fulltext PDF, https\://arxiv.org/pdf/1109.0517.pdf, application/pdf]</td>
+<td class="success">check(LinkedFile, List)[2]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[10] [ParsedFileField{description='', link='wei2005ahp.pdf', fileType=''}, ParsedFileField{description='', link='other.pdf', fileType=''}], wei2005ahp.pdf;other.pdf</td>
+<td class="success">stringsToParseTest(List, String)[10]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[11] [ParsedFileField{description='test:;', link='wei2005ahp.pdf', fileType='PDF'}], test\:\;:wei2005ahp.pdf:PDF</td>
+<td class="success">stringsToParseTest(List, String)[11]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[12] [ParsedFileField{description='test&amp;#44;st:;', link='wei2005ahp.pdf', fileType='PDF'}], test&amp;#44\;st\:\;:wei2005ahp.pdf:PDF</td>
+<td class="success">stringsToParseTest(List, String)[12]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[13] [ParsedFileField{description='desc', link='C:/test.pdf', fileType='PDF'}], desc:C\:\\test.pdf:PDF</td>
+<td class="success">stringsToParseTest(List, String)[13]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[14] [ParsedFileField{description='desc', link='C:/test.pdf', fileType='PDF'}], desc:C:\test.pdf:PDF</td>
+<td class="success">stringsToParseTest(List, String)[14]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[15] [ParsedFileField{description='Boyd2012.pdf', link='C:/Users/Literature_database/Boyd2012.pdf', fileType='PDF'}], Boyd2012.pdf:C\:\\Users\\Literature_database\\Boyd2012.pdf:PDF</td>
+<td class="success">stringsToParseTest(List, String)[15]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[16] [ParsedFileField{description='', link='file.pdf', fileType=''}], file.pdf::</td>
+<td class="success">stringsToParseTest(List, String)[16]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[17] [ParsedFileField{description='', link='file.pdf', fileType=''}], :file.pdf</td>
+<td class="success">stringsToParseTest(List, String)[17]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[18] [ParsedFileField{description='', link='file.pdf', fileType=''}], ::file.pdf</td>
+<td class="success">stringsToParseTest(List, String)[18]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[19] [ParsedFileField{description='desc', link='file.pdf', fileType='PDF', sourceUrl='qwer'}], desc:file.pdf:PDF:qwer:asdf:uiop</td>
+<td class="success">stringsToParseTest(List, String)[19]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] [], null</td>
+<td class="success">stringsToParseTest(List, String)[1]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[20] [ParsedFileField{description='', link='/home/www.google.de.pdf', fileType=''}], :/home/www.google.de.pdf</td>
+<td class="success">stringsToParseTest(List, String)[20]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[21] [ParsedFileField{description='', link='https://books.google.de/', fileType=''}], https://books.google.de/</td>
+<td class="success">stringsToParseTest(List, String)[21]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[22] [ParsedFileField{description='', link='https://www.google.de/', fileType=''}], https://www.google.de/</td>
+<td class="success">stringsToParseTest(List, String)[22]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[23] [ParsedFileField{description='', link='http://ceur-ws.org/Vol-438', fileType='URL'}], :http\://ceur-ws.org/Vol-438:URL</td>
+<td class="success">stringsToParseTest(List, String)[23]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[24] [ParsedFileField{description='desc', link='http://ceur-ws.org/Vol-438', fileType='URL'}], desc:http\://ceur-ws.org/Vol-438:URL</td>
+<td class="success">stringsToParseTest(List, String)[24]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[25] [ParsedFileField{description='arXiv Fulltext PDF', link='matheus.ea explicit.pdf', fileType='PDF', sourceUrl='https://arxiv.org/pdf/1109.0517.pdf'}], arXiv Fulltext PDF:matheus.ea explicit.pdf:PDF:https\://arxiv.org/pdf/1109.0517.pdf</td>
+<td class="success">stringsToParseTest(List, String)[25]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[26] [ParsedFileField{description='', link='matheus.ea explicit.pdf', fileType='PDF', sourceUrl='https://arxiv.org/pdf/1109.0517.pdf'}], :matheus.ea explicit.pdf:PDF:https\://arxiv.org/pdf/1109.0517.pdf</td>
+<td class="success">stringsToParseTest(List, String)[26]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[27] [ParsedFileField{description='arXiv Fulltext PDF', link='', fileType='PDF', sourceUrl='https://arxiv.org/pdf/1109.0517.pdf'}], arXiv Fulltext PDF::PDF:https\://arxiv.org/pdf/1109.0517.pdf</td>
+<td class="success">stringsToParseTest(List, String)[27]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[28] [ParsedFileField{description='', link='matheus.ea explicit.pdf', fileType='', sourceUrl='https://arxiv.org/pdf/1109.0517.pdf'}], :matheus.ea explicit.pdf::https\://arxiv.org/pdf/1109.0517.pdf</td>
+<td class="success">stringsToParseTest(List, String)[28]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] [], </td>
+<td class="success">stringsToParseTest(List, String)[2]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] [ParsedFileField{description='Desc', link='File.PDF', fileType='PDF'}], Desc:File.PDF:PDF</td>
+<td class="success">stringsToParseTest(List, String)[3]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] [ParsedFileField{description='', link='C:/Users/XXXXXX/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Brown - 2017 - Physical test methods for elastomers.pdf', fileType='pdf'}], :C$\backslash$:/Users/XXXXXX/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Brown - 2017 - Physical test methods for elastomers.pdf:pdf</td>
+<td class="success">stringsToParseTest(List, String)[4]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[5] [ParsedFileField{description='', link='http://arxiv.org/pdf/2010.08497v1', fileType='PDF'}], :http\://arxiv.org/pdf/2010.08497v1:PDF</td>
+<td class="success">stringsToParseTest(List, String)[5]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[6] [ParsedFileField{description='', link='htt://arxiv.org/pdf/2010.08497v1', fileType='PDF'}], :htt\://arxiv.org/pdf/2010.08497v1:PDF</td>
+<td class="success">stringsToParseTest(List, String)[6]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[7] [ParsedFileField{description='arXiv Fulltext PDF', link='https://arxiv.org/pdf/1109.0517.pdf', fileType='application/pdf'}], arXiv Fulltext PDF:https\://arxiv.org/pdf/1109.0517.pdf:application/pdf</td>
+<td class="success">stringsToParseTest(List, String)[7]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[8] [ParsedFileField{description='', link='wei2005ahp.pdf', fileType='PDF'}], :wei2005ahp.pdf:PDF</td>
+<td class="success">stringsToParseTest(List, String)[8]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[9] [ParsedFileField{description='', link='wei2005ahp.pdf', fileType=''}], wei2005ahp.pdf</td>
+<td class="success">stringsToParseTest(List, String)[9]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.6</a> at Mar 3, 2024, 9:37:34 PM</p>
+</div>
+</div>
+</body>
+</html>

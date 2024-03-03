@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PersonNameStringConverterTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PersonNameStringConverterTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.jabref.gui.autocompleter.html">org.jabref.gui.autocompleter</a> &gt; PersonNameStringConverterTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">21</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.043s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">shouldAutoComplete=TRUE, firstNameMode=ONLY_FULL, nameFormat=LAST_FIRST, expectedResult=Reagle, Jr., Joseph M.</td>
+<td class="success">toStringWithAutoCompletePreferences(boolean, AutoCompleteFirstNameMode, NameFormat, String)[1]</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldAutoComplete=TRUE, firstNameMode=ONLY_ABBREVIATED, nameFormat=LAST_FIRST, expectedResult=Reagle, Jr., J. M.</td>
+<td class="success">toStringWithAutoCompletePreferences(boolean, AutoCompleteFirstNameMode, NameFormat, String)[2]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldAutoComplete=TRUE, firstNameMode=BOTH, nameFormat=LAST_FIRST, expectedResult=Reagle, Jr., J. M.</td>
+<td class="success">toStringWithAutoCompletePreferences(boolean, AutoCompleteFirstNameMode, NameFormat, String)[3]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldAutoComplete=TRUE, firstNameMode=ONLY_FULL, nameFormat=FIRST_LAST, expectedResult=Joseph M. Reagle, Jr.</td>
+<td class="success">toStringWithAutoCompletePreferences(boolean, AutoCompleteFirstNameMode, NameFormat, String)[4]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldAutoComplete=TRUE, firstNameMode=ONLY_ABBREVIATED, nameFormat=FIRST_LAST, expectedResult=J. M. Reagle, Jr.</td>
+<td class="success">toStringWithAutoCompletePreferences(boolean, AutoCompleteFirstNameMode, NameFormat, String)[5]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldAutoComplete=TRUE, firstNameMode=BOTH, nameFormat=FIRST_LAST, expectedResult=J. M. Reagle, Jr.</td>
+<td class="success">toStringWithAutoCompletePreferences(boolean, AutoCompleteFirstNameMode, NameFormat, String)[6]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldAutoComplete=TRUE, firstNameMode=ONLY_FULL, nameFormat=BOTH, expectedResult=Reagle, Jr., Joseph M.</td>
+<td class="success">toStringWithAutoCompletePreferences(boolean, AutoCompleteFirstNameMode, NameFormat, String)[7]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldAutoComplete=TRUE, firstNameMode=ONLY_ABBREVIATED, nameFormat=BOTH, expectedResult=Reagle, Jr., J. M.</td>
+<td class="success">toStringWithAutoCompletePreferences(boolean, AutoCompleteFirstNameMode, NameFormat, String)[8]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldAutoComplete=TRUE, firstNameMode=BOTH, nameFormat=BOTH, expectedResult=Reagle, Jr., J. M.</td>
+<td class="success">toStringWithAutoCompletePreferences(boolean, AutoCompleteFirstNameMode, NameFormat, String)[9]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">autoCompFF=TRUE, autoCompLF=FALSE, autoCompleteFirstNameMode=BOTH, expectedResult=J. M. Reagle, Jr.</td>
+<td class="success">toStringWithoutAutoCompletePreferences(boolean, boolean, AutoCompleteFirstNameMode, String)[10]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">autoCompFF=FALSE, autoCompLF=TRUE, autoCompleteFirstNameMode=BOTH, expectedResult=Reagle, Jr., J. M.</td>
+<td class="success">toStringWithoutAutoCompletePreferences(boolean, boolean, AutoCompleteFirstNameMode, String)[11]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">autoCompFF=FALSE, autoCompLF=FALSE, autoCompleteFirstNameMode=BOTH, expectedResult=Reagle</td>
+<td class="success">toStringWithoutAutoCompletePreferences(boolean, boolean, AutoCompleteFirstNameMode, String)[12]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">autoCompFF=TRUE, autoCompLF=TRUE, autoCompleteFirstNameMode=ONLY_FULL, expectedResult=Reagle, Jr., Joseph M.</td>
+<td class="success">toStringWithoutAutoCompletePreferences(boolean, boolean, AutoCompleteFirstNameMode, String)[1]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">autoCompFF=TRUE, autoCompLF=FALSE, autoCompleteFirstNameMode=ONLY_FULL, expectedResult=Joseph M. Reagle, Jr.</td>
+<td class="success">toStringWithoutAutoCompletePreferences(boolean, boolean, AutoCompleteFirstNameMode, String)[2]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">autoCompFF=FALSE, autoCompLF=TRUE, autoCompleteFirstNameMode=ONLY_FULL, expectedResult=Reagle, Jr., Joseph M.</td>
+<td class="success">toStringWithoutAutoCompletePreferences(boolean, boolean, AutoCompleteFirstNameMode, String)[3]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">autoCompFF=FALSE, autoCompLF=FALSE, autoCompleteFirstNameMode=ONLY_FULL, expectedResult=Reagle</td>
+<td class="success">toStringWithoutAutoCompletePreferences(boolean, boolean, AutoCompleteFirstNameMode, String)[4]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">autoCompFF=TRUE, autoCompLF=TRUE, autoCompleteFirstNameMode=ONLY_ABBREVIATED, expectedResult=Reagle, Jr., J. M.</td>
+<td class="success">toStringWithoutAutoCompletePreferences(boolean, boolean, AutoCompleteFirstNameMode, String)[5]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">autoCompFF=TRUE, autoCompLF=FALSE, autoCompleteFirstNameMode=ONLY_ABBREVIATED, expectedResult=J. M. Reagle, Jr.</td>
+<td class="success">toStringWithoutAutoCompletePreferences(boolean, boolean, AutoCompleteFirstNameMode, String)[6]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">autoCompFF=FALSE, autoCompLF=TRUE, autoCompleteFirstNameMode=ONLY_ABBREVIATED, expectedResult=Reagle, Jr., J. M.</td>
+<td class="success">toStringWithoutAutoCompletePreferences(boolean, boolean, AutoCompleteFirstNameMode, String)[7]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">autoCompFF=FALSE, autoCompLF=FALSE, autoCompleteFirstNameMode=ONLY_ABBREVIATED, expectedResult=Reagle</td>
+<td class="success">toStringWithoutAutoCompletePreferences(boolean, boolean, AutoCompleteFirstNameMode, String)[8]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">autoCompFF=TRUE, autoCompLF=TRUE, autoCompleteFirstNameMode=BOTH, expectedResult=Reagle, Jr., J. M.</td>
+<td class="success">toStringWithoutAutoCompletePreferences(boolean, boolean, AutoCompleteFirstNameMode, String)[9]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.6</a> at Mar 3, 2024, 9:37:34 PM</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - LatexIntegrityCheckerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>LatexIntegrityCheckerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.jabref.logic.integrity.html">org.jabref.logic.integrity</a> &gt; LatexIntegrityCheckerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">81</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.087s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">[10] TITLE, \# \$ \% \&amp; \{ \} \_ \^ \\</td>
+<td class="success">acceptsAllowedInputs(Field, String)[10]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[11] TITLE, \tiny Tiny Text</td>
+<td class="success">acceptsAllowedInputs(Field, String)[11]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[12] TITLE, \small Small Text</td>
+<td class="success">acceptsAllowedInputs(Field, String)[12]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[13] TITLE, \large Large Text</td>
+<td class="success">acceptsAllowedInputs(Field, String)[13]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[14] TITLE, \verb|Verbatim|</td>
+<td class="success">acceptsAllowedInputs(Field, String)[14]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[15] TITLE, $\widetilde{i}$</td>
+<td class="success">acceptsAllowedInputs(Field, String)[15]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[16] TITLE, \ldots</td>
+<td class="success">acceptsAllowedInputs(Field, String)[16]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[17] TITLE, \begin{quote}Quoted Text\end{quote}
+</td>
+<td class="success">acceptsAllowedInputs(Field, String)[17]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[18] TITLE, \begin{center}Centered Text\end{center}
+</td>
+<td class="success">acceptsAllowedInputs(Field, String)[18]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[19] TITLE, $x + y = z$</td>
+<td class="success">acceptsAllowedInputs(Field, String)[19]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] TITLE, Simple Text</td>
+<td class="success">acceptsAllowedInputs(Field, String)[1]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[20] TITLE, \(a^2 + b^2 = c^2\)</td>
+<td class="success">acceptsAllowedInputs(Field, String)[20]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[21] TITLE, \[E = mc^2\]</td>
+<td class="success">acceptsAllowedInputs(Field, String)[21]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[22] TITLE, \begin{math} V = I \cdot R \end{math}</td>
+<td class="success">acceptsAllowedInputs(Field, String)[22]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[23] TITLE, \begin{eqnarray} x + y &amp;= z \\ a &amp;= b + c \\ p &amp;= \frac{q}{r} \end{eqnarray}</td>
+<td class="success">acceptsAllowedInputs(Field, String)[23]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[24] TITLE, \[ \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} \]</td>
+<td class="success">acceptsAllowedInputs(Field, String)[24]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[25] TITLE, \[ \begin{bmatrix} x &amp; y &amp; z \\ u &amp; v &amp; w \end{bmatrix} \]</td>
+<td class="success">acceptsAllowedInputs(Field, String)[25]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[26] TITLE, \begin{tabular}{|c|c|} \hline 1 &amp; 2 \\ 3 &amp; 4 \\ \hline \end{tabular}</td>
+<td class="success">acceptsAllowedInputs(Field, String)[26]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[27] TITLE, \begin{tabular}{cc} A &amp; B \\ C &amp; D \end{tabular}</td>
+<td class="success">acceptsAllowedInputs(Field, String)[27]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[28] TITLE, \begin{tabular}{|l|r|} \hline Item &amp; Quantity \\ \hline Apple &amp; 3 \\ Banana &amp; 5 \\ \hline \end{tabular}</td>
+<td class="success">acceptsAllowedInputs(Field, String)[28]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[29] TITLE, \begin{itemize} \item Item 1 \item Item 2 \item Item 3 \end{itemize}</td>
+<td class="success">acceptsAllowedInputs(Field, String)[29]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] TITLE, \section{X}</td>
+<td class="success">acceptsAllowedInputs(Field, String)[2]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[30] TITLE, \begin{enumerate} \item First \item Second \item Third \end{enumerate}</td>
+<td class="success">acceptsAllowedInputs(Field, String)[30]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[31] TITLE, First Line \\ Second Line</td>
+<td class="success">acceptsAllowedInputs(Field, String)[31]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[32] TITLE, Some \hspace{2cm} Space</td>
+<td class="success">acceptsAllowedInputs(Field, String)[32]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[33] TITLE, \textbf{\emph{Bold and Emphasized Text}} $5-3_k$</td>
+<td class="success">acceptsAllowedInputs(Field, String)[33]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[34] TITLE, \begin{itemize} \item\begin{quote} \textbf{Quoted} \emph{Text} \end{quote} \end{itemize}</td>
+<td class="success">acceptsAllowedInputs(Field, String)[34]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[35] COMMENT, \undefinedCommand</td>
+<td class="success">acceptsAllowedInputs(Field, String)[35]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[36] ABSTRACT, \textless{}xml\textgreater{} \textbar something 	extbackslash</td>
+<td class="success">acceptsAllowedInputs(Field, String)[36]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[37] TITLE, No ampersand at all</td>
+<td class="success">acceptsAllowedInputs(Field, String)[37]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[38] FOREWORD, Properly escaped \&amp;</td>
+<td class="success">acceptsAllowedInputs(Field, String)[38]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[39] AUTHOR, \&amp; Multiple properly escaped \&amp;</td>
+<td class="success">acceptsAllowedInputs(Field, String)[39]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] TITLE, \newline</td>
+<td class="success">acceptsAllowedInputs(Field, String)[3]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[40] BOOKTITLE, \\\&amp; With multiple backslashes</td>
+<td class="success">acceptsAllowedInputs(Field, String)[40]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[41] COMMENT, \\\&amp; With multiple backslashes multiple times \\\\\&amp;</td>
+<td class="success">acceptsAllowedInputs(Field, String)[41]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[42] NOTE, In the \&amp; middle of \\\&amp; something</td>
+<td class="success">acceptsAllowedInputs(Field, String)[42]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[43] DOI, 10.1007/0-387-22874-8_7</td>
+<td class="success">acceptsAllowedInputs(Field, String)[43]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[44] UnknownCommentField{name='comment-test'}, _something_ which is triggers the integrity check ^^^ $</td>
+<td class="success">acceptsAllowedInputs(Field, String)[44]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] TITLE, \par</td>
+<td class="success">acceptsAllowedInputs(Field, String)[4]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[5] TITLE, \underline{Underlined}</td>
+<td class="success">acceptsAllowedInputs(Field, String)[5]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[6] TITLE, \texttt{Monospace}</td>
+<td class="success">acceptsAllowedInputs(Field, String)[6]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[7] TITLE, \textit{Italic}</td>
+<td class="success">acceptsAllowedInputs(Field, String)[7]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[8] TITLE, Café</td>
+<td class="success">acceptsAllowedInputs(Field, String)[8]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[9] TITLE, αβγδε</td>
+<td class="success">acceptsAllowedInputs(Field, String)[9]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[10] LaTeX Warning: Command \par cannot be used in MATH mode, TITLE, $\par$</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[10]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[11] LaTeX Warning: Command \textbf is missing required argument #1, KEYWORDS, \textbf</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[11]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[12] LaTeX Warning: Found \end of environment align instead of itemize, ABSTRACT, \begin{itemize} \end{align}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[12]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[13] LaTeX Warning: Expected to read valid environment name enclosed in braces without whitespace, TITLE, \begin{ align }</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[13]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[14] LaTeX Warning: Undefined environment undefinedEnv, ABSTRACT, \begin{undefinedEnv}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[14]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[15] LaTeX Warning: Environment itemize cannot be used in MATH mode, TITLE, $\begin{itemize}$</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[15]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[16] LaTeX Warning: Environment itemize was still open at end of input document, ABSTRACT, \begin{itemize}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[16]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[17] LaTeX Warning: Unexpected \end - no environment is currently open, KEYWORDS, \end{itemize}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[17]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[18] LaTeX Warning: Environment tabular is missing required argument #1, TITLE, \begin{tabular}\end{tabular}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[18]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[19] LaTeX Warning: Input ended before name of new command was found, TITLE, \newcommand{\</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[19]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] LaTeX Warning: Finished reading document before finding required terminator &quot;}&quot;, ABSTRACT, Unbalanced braces {</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[1]</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[20] LaTeX Warning: Name of new command must be preceded by \, TITLE, \newcommand{MyCommand}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[20]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[21] LaTeX Warning: Input ended before end of new command definition, TITLE, \newcommand{\MyCommand}{</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[21]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[22] LaTeX Warning: No definition provided for new command MyCommand, TITLE, \newcommand{\MyCommand}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[22]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[23] LaTeX Warning: No } found after new command name, TITLE, \newcommand{\MyCommand</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[23]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[24] LaTeX Warning: Number of arguments specified in command or environment definition MyCommand must be an integer between 1 and 9 - not 0, TITLE, \newcommand{\MyCommand}[0]{Text}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[24]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[25] LaTeX Warning: Reserved command begin cannot be redefined, TITLE, \renewcommand{\begin}{}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[25]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[26] LaTeX Warning: Input ended before end of argument count specification, TITLE, \newcommand{\MyCommand}[</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[26]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[27] LaTeX Warning: Definition of command MyCommand refers to argument #2 but only 1 have been declared, TITLE, \newcommand{\MyCommand}[1]{#2}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[27]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[28] LaTeX Warning: Expected to read name of new environment enclosed in braces, TITLE, \newenvironment{}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[28]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[29] LaTeX Warning: No begin definition provided for new environment MyEnvironment, TITLE, \newenvironment{MyEnvironment}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[29]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] LaTeX Warning: Nothing following \, ABSTRACT, \</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[2]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[30] LaTeX Warning: Definition of begin of environment MyEnvironment refers to argument #1 but only 0 have been declared, TITLE, \newenvironment{MyEnvironment}{#1}{}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[30]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[31] LaTeX Warning: Definition of end of environment MyEnvironment refers to argument #2 but arguments may not be used here, TITLE, \newenvironment{MyEnvironment}[1]{#1}{#2}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[31]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[32] LaTeX Warning: Found content before first \item, TITLE, \begin{itemize}content before first \item{}\end{itemize}</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[32]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[33] LaTeX Warning: Ambiguous multiple use of \over at current level, TITLE, $1 \over \over 3$</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[33]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[34] LaTeX Warning: Trailing subscript/superscript token, TITLE, $x_$</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[34]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[35] LaTeX Warning: Double subscript/superscript token is ambiguous - use curly brackets, TITLE, $x_i_j$</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[35]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[36] LaTeX Warning: \right had no preceding \left, TITLE, $\right)$</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[36]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[37] LaTeX Warning: \left had no following \right, TITLE, $\left($</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[37]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] LaTeX Warning: Delimiter \] closing Math mode followed no matching opener, TITLE, 1+1=2\]</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[3]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] LaTeX Warning: Already in math mode - cannot use \( or \[, ABSTRACT, Braces inside: $\(1+1\)=2$</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[4]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[5] LaTeX Warning: $ was ended by $$, TITLE, $1+1=2$$</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[5]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[6] LaTeX Warning: Math superscript (^) and subscript (_) characters are not allowed in text mode, SUBTITLE, _ or ^ Outside Math-Environment</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[6]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[7] LaTeX Warning: $ characters cannot be used inside math mode, TITLE, \$ inside math mode \($1+1=2$\)</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[7]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[8] LaTeX Warning: \verb or \verb* must be followed by a non-whitespace delimiter character, KEYWORDS, \verb </td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[8]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[9] LaTeX Warning: Undefined command \undefinedCommand, ABSTRACT, \undefinedCommand</td>
+<td class="success">rejectsDisallowedInputs(String, Field, String)[9]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.6</a> at Mar 3, 2024, 9:37:34 PM</p>
+</div>
+</div>
+</body>
+</html>
