@@ -38,12 +38,16 @@ Anna
 - help Lotta and Filippa with writing and debugging code for requirement 1 (60m)
 
 Emil
+- none
 
-Filippa
+Filippa (pair-programmed with Lotta)
+- 2h internal discussions (around 20m discussion per work session)
 
-Lotta
+Lotta (pair-programmed with Filippa)
+- 2h internal discussions (around 20m discussion per work session)
 
 Tianning
+- none
 
 3. reading documentation;
 
@@ -53,12 +57,32 @@ Anna
 - exploring possibilities for creating equivalent JabRef group from BibDesk Smart group (60m)
 
 Emil
+- base understanding of project structure (15m)
+- understanding of key functionality related to issue (60m)
+- researching Propery Lists (60m)
+- reading dd-plist documentation (60m)
+- browsing java standard library documentation (60m)
+- extend understanding of project structure for UML diagram (45m)
 
 Filippa
+- Understanding the related classes to the issue (45m)
+- Group types and how they are stored in file (40m)
+- Understanding how the metadata is stored, generated and structured (30m)
+- Figuring out how we would implement Smart Groups (60m)
+- Understanding and learning the classes `DocumentBuilder` and `NodeList` (60m per class)
 
 Lotta
+- Understanding the related classes to the issue (45m)
+- Group types and how they are stored in file (40m)
+- Understanding how the metadata is stored, generated and structured (30m)
+- Figuring out how we would implement Smart Groups (60m)
+- Understanding and learning the classes `DocumentBuilder` and `NodeList` (60m per class)
 
 Tianning
+- understand the issue we need to handle with(45m)
+- read the architecture of JabRef especially its docs folder (60m)
+- exploring using java library to implementate base64 decode (60m)
+- exploring using java library to transform string into plist format (60m)
 
 4. configuration and setup;
 
@@ -68,12 +92,21 @@ Anna
 - resolving test failures due to missing CSL style files (30m)
 
 Emil
+- searching for project and issue (60m)
+- configuring local workspace (30m)
+- re-configuring checkstyle (15m)
 
 Filippa
+- Searching for project and issue (60m)
+- Configuring text editor (20m)
 
 Lotta
+- Searching for project and issue (60m)
+- Configuring local workspace (20m)
 
 Tianning
+- fork, clone JabRef, download and set up gradle, try to run (60m)
+- download the bibdesk and try the example file in it (60m)
 
 5. analyzing code/output;
 
@@ -83,12 +116,27 @@ Anna
 - code review (60m)
 
 Emil
+- understanding how linked files are handled (30m)
+- understanding how Bib entries are created and modified (30m) 
+- understanding the parsing code (30m)
+- checking project testing conventions (30m)
+- code review (30m)
 
 Filippa
+- Understand how and where Jabref imports groups (60m)
+- Understand how and where the metadata containing group information is parsed in Jabref (30m)
+- Understanding the hierarchical structure of the JabRef groups (30m)
 
 Lotta
+- Understand how and where Jabref imports groups (60m)
+- Understand how and where the metadata containing group information is parsed in Jabref (30m)
+- Understanding the hierarchical structure of the JabRef groups (30m)
 
 Tianning
+- understand how JabRef setField while parsing and the field type (60m)
+- understand the function of specific file, such as benchmarks.java, to help write the architecture (60m)
+- understand how JabRef parse an entry and the group related structure (60m)
+- code review (45m)
 
 6. writing documentation;
 
@@ -98,12 +146,22 @@ Anna
 - SEMAT section of report (30m)
 
 Emil
+- Designing UML diagram (60m)
+- Formatting and including UML diagram in report (60m)
+- Documenting added library (60m)
+- Preparing patch (45m)
+- Finalizing Pull Request to follow contribution conventions (45m)
 
 Filippa
+- Writing Javadoc for our introduced functions (15m)
+- Writing our time spent in report (15m)
 
 Lotta
+- Writing Javadoc for our introduced functions (15m)
+- Writing our time spent in report (15m)
 
 Tianning
+- writing the architecture overview (60m)
 
 7. writing code;
 
@@ -113,12 +171,32 @@ Anna
 - experimenting with how to adapt parsing code for static groups to smart groups (60m)
 
 Emil
+- writing test for requirement 4 (15m)
+- fixing formatting (15m)
+- adding requirement 4 (60m)
 
 Filippa
+- Implementing requirement 1: 
+  - Parse XML: creating data structure to store XML tags (60m), extracting data from bib file (60m)
+  - Create new Explicit group by adding to metadata (60m)
+  - Adding citation entries to the group (60m)
+- Planning and starting to implement requirement 2:
+  - Creating plan for how to parse Smart groups (60m)
+  - Begin extracting data (60m)
 
 Lotta
+- Implementing requirement 1:
+    - Parse XML: creating data structure to store XML tags (60m), extracting data from bib file (60m)
+    - Create new Explicit group by adding to metadata (60m)
+    - Adding citation entries to the group (60m)
+- Planning and starting to implement requirement 2:
+    - Creating plan for how to parse Smart groups (60m)
+    - Begin extracting data (60m)
 
 Tianning
+- writing linked file pattern matching part(60m)
+- writing linked file decode part (60m)
+- writing linked file decode test, but didn't use at the end (60m)
 
 8. running code?
 
@@ -129,12 +207,21 @@ Anna
 - checking and trying to fix so new tests executed as part of full test suite (60m)
 
 Emil
+- verifying and running test (45m)
+- getting an understanding of JabRef functionality (60m)
 
 Filippa
+- Understanding our implementation through logging and running the program and importing different bib files:
+  - Requirement 1 (60m)
+  - Requirement 2 (60m)
 
 Lotta
+- Understanding our implementation through logging and running the program and importing different bib files:
+    - Requirement 1 (60m)
+    - Requirement 2 (60m)
 
 Tianning
+- find where the other field shows and verify code's result in JabRef (60m)
 
 9. in total?
 
@@ -142,12 +229,16 @@ Anna
 - 18h individual + 5.75h meetings = 23.75h
 
 Emil
+- 16.5h individiual + 5.75h meetings = 22.25h
 
 Filippa
+- 18.7h pair programming + 5.75h meetings = 24.5h
 
 Lotta
+- 18.7h pair programming + 5.75h meetings = 24.5h
 
 Tianning
+- 14.5h individual + 5.75h meetings = 20.25h
 
 ## Overview of issue(s) and work done.
 
@@ -200,13 +291,16 @@ Optional (point 4): the patch is clean.
 URL: https://github.com/JabRef/jabref/pull/10968
 
 ## Test results
+Test logs for tests before changes: [here](https://htmlpreview.github.io/?https://github.com/Frequinzy/jabref/blob/report/test_before/index.html)
 
-Overall results with link to a copy or excerpt of the logs (before/after
-refactoring).
-
-**TODO**
+Test logs for tests after changes: [here](https://htmlpreview.github.io/?https://github.com/Frequinzy/jabref/blob/report/test_after/index.html)
 
 ## UML class diagram and its description
+
+![UML diagram as png](UML.png)
+Can also be viewed as a [pdf file](UML.pdf)
+
+This is a small part of the project as a whole. Specifically the most important components for the import command. Which the application uses to import external citation libraries. The classes shown in more detail are ones that have had direct changes when solving the issue. Even then there are plenty of fields and methods that have been omitted due to irrelevance for the issue.
 
 ### Key changes/classes affected
 
