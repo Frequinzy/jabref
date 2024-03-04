@@ -44,6 +44,7 @@ Filippa
 Lotta
 
 Tianning
+- none
 
 3. reading documentation;
 
@@ -59,6 +60,10 @@ Filippa
 Lotta
 
 Tianning
+- understand the issue we need to handle with(45m)
+- read the architecture of JabRef especially its docs folder (60m)
+- exploring using java library to implementate base64 decode (60m)
+- exploring using java library to transform string into plist format (60m)
 
 4. configuration and setup;
 
@@ -74,6 +79,8 @@ Filippa
 Lotta
 
 Tianning
+- fork, clone JabRef, download and set up gradle, try to run (60m)
+- download the bibdesk and try the example file in it (60m)
 
 5. analyzing code/output;
 
@@ -89,6 +96,10 @@ Filippa
 Lotta
 
 Tianning
+- understand how JabRef setField while parsing and the field type (60m)
+- understand the function of specific file, such as benchmarks.java, to help write the architecture (60m)
+- understand how JabRef parse an entry and the group related structure (60m)
+- code review (45m)
 
 6. writing documentation;
 
@@ -104,6 +115,7 @@ Filippa
 Lotta
 
 Tianning
+- writing the architecture overview (60m)
 
 7. writing code;
 
@@ -119,6 +131,9 @@ Filippa
 Lotta
 
 Tianning
+- writing linked file pattern matching part(60m)
+- writing linked file decode part (60m)
+- writing linked file decode test, but didn't use at the end (60m)
 
 8. running code?
 
@@ -135,6 +150,7 @@ Filippa
 Lotta
 
 Tianning
+- find where the other field shows and verify code's result in JabRef (60m)
 
 9. in total?
 
@@ -148,6 +164,7 @@ Filippa
 Lotta
 
 Tianning
+- 14.5h individual + 5.75h meetings = 20.25h
 
 ## Overview of issue(s) and work done.
 
