@@ -47,6 +47,7 @@ Lotta (pair-programmed with Filippa)
 - 2h internal discussions (around 20m discussion per work session)
 
 Tianning
+- none
 
 3. reading documentation;
 
@@ -78,6 +79,10 @@ Lotta
 - Understanding and learning the classes `DocumentBuilder` and `NodeList` (60m per class)
 
 Tianning
+- understand the issue we need to handle with(45m)
+- read the architecture of JabRef especially its docs folder (60m)
+- exploring using java library to implementate base64 decode (60m)
+- exploring using java library to transform string into plist format (60m)
 
 4. configuration and setup;
 
@@ -100,6 +105,8 @@ Lotta
 - Configuring local workspace (20m)
 
 Tianning
+- fork, clone JabRef, download and set up gradle, try to run (60m)
+- download the bibdesk and try the example file in it (60m)
 
 5. analyzing code/output;
 
@@ -126,6 +133,10 @@ Lotta
 - Understanding the hierarchical structure of the JabRef groups (30m)
 
 Tianning
+- understand how JabRef setField while parsing and the field type (60m)
+- understand the function of specific file, such as benchmarks.java, to help write the architecture (60m)
+- understand how JabRef parse an entry and the group related structure (60m)
+- code review (45m)
 
 6. writing documentation;
 
@@ -150,6 +161,7 @@ Lotta
 - Writing our time spent in report (15m)
 
 Tianning
+- writing the architecture overview (60m)
 
 7. writing code;
 
@@ -182,6 +194,9 @@ Lotta
     - Begin extracting data (60m)
 
 Tianning
+- writing linked file pattern matching part(60m)
+- writing linked file decode part (60m)
+- writing linked file decode test, but didn't use at the end (60m)
 
 8. running code?
 
@@ -206,6 +221,7 @@ Lotta
     - Requirement 2 (60m)
 
 Tianning
+- find where the other field shows and verify code's result in JabRef (60m)
 
 9. in total?
 
@@ -222,6 +238,7 @@ Lotta
 - 18.7h pair programming + 5.75h meetings = 24.5h
 
 Tianning
+- 14.5h individual + 5.75h meetings = 20.25h
 
 ## Overview of issue(s) and work done.
 
