@@ -38,6 +38,7 @@ Anna
 - help Lotta and Filippa with writing and debugging code for requirement 1 (60m)
 
 Emil
+- none
 
 Filippa
 
@@ -53,6 +54,12 @@ Anna
 - exploring possibilities for creating equivalent JabRef group from BibDesk Smart group (60m)
 
 Emil
+- base understanding of project structure (15m)
+- understanding of key functionality related to issue (60m)
+- researching Propery Lists (60m)
+- reading dd-plist documentation (60m)
+- browsing java standard library documentation (60m)
+- extend understanding of project structure for UML diagram (45m)
 
 Filippa
 
@@ -68,6 +75,9 @@ Anna
 - resolving test failures due to missing CSL style files (30m)
 
 Emil
+- searching for project and issue (60m)
+- configuring local workspace (30m)
+- re-configuring checkstyle (15m)
 
 Filippa
 
@@ -83,6 +93,11 @@ Anna
 - code review (60m)
 
 Emil
+- understanding how linked files are handled (30m)
+- understanding how Bib entries are created and modified (30m) 
+- understanding the parsing code (30m)
+- checking project testing conventions (30m)
+- code review (30m)
 
 Filippa
 
@@ -98,6 +113,11 @@ Anna
 - SEMAT section of report (30m)
 
 Emil
+- Designing UML diagram (60m)
+- Formatting and including UML diagram in report (60m)
+- Documenting added library (60m)
+- Preparing patch (45m)
+- Finalizing Pull Request to follow contribution conventions (45m)
 
 Filippa
 
@@ -113,6 +133,9 @@ Anna
 - experimenting with how to adapt parsing code for static groups to smart groups (60m)
 
 Emil
+- writing test for requirement 4 (15m)
+- fixing formatting (15m)
+- adding requirement 4 (60m)
 
 Filippa
 
@@ -129,6 +152,8 @@ Anna
 - checking and trying to fix so new tests executed as part of full test suite (60m)
 
 Emil
+- verifying and running test (45m)
+- getting an understanding of JabRef functionality (60m)
 
 Filippa
 
@@ -142,6 +167,7 @@ Anna
 - 18h individual + 5.75h meetings = 23.75h
 
 Emil
+- 16.5h individiual + 5.75h meetings = 22.25h
 
 Filippa
 
