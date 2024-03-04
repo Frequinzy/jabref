@@ -40,10 +40,10 @@ Anna
 Emil
 
 Filippa (pair-programmed with Lotta)
-- 2h internal discussions
+- 2h internal discussions (around 20m discussion per work session)
 
 Lotta (pair-programmed with Filippa)
-- 2h internal discussions
+- 2h internal discussions (around 20m discussion per work session)
 
 Tianning
 
@@ -60,15 +60,15 @@ Filippa
 - Understanding the related classes to the issue (45m)
 - Group types and how they are stored in file (40m)
 - Understanding how the metadata is stored, generated and structured (30m)
-- Figuring out how we would implement Smart Groups (1h)
-- Understanding and learning the classes `DocumentBuilder` and `NodeList` (2h)
+- Figuring out how we would implement Smart Groups (60m)
+- Understanding and learning the classes `DocumentBuilder` and `NodeList` (60m per class)
 
 Lotta
 - Understanding the related classes to the issue (45m)
 - Group types and how they are stored in file (40m)
 - Understanding how the metadata is stored, generated and structured (30m)
-- Figuring out how we would implement Smart Groups (1h)
-- Understanding and learning the classes `DocumentBuilder` and `NodeList` (2h)
+- Figuring out how we would implement Smart Groups (60m)
+- Understanding and learning the classes `DocumentBuilder` and `NodeList` (60m per class)
 
 Tianning
 
@@ -86,7 +86,7 @@ Filippa
 - Configuring text editor (20m)
 
 Lotta
-- Searching for project and issue (60 m)
+- Searching for project and issue (60m)
 - Configuring local workspace (20m)
 
 Tianning
@@ -101,12 +101,12 @@ Anna
 Emil
 
 Filippa
-- Understand how and where Jabref imports groups (1h)
+- Understand how and where Jabref imports groups (60m)
 - Understand how and where the metadata containing group information is parsed in Jabref (30m)
 - Understanding the hierarchical structure of the JabRef groups (30m)
 
 Lotta
-- Understand how and where Jabref imports groups (1h)
+- Understand how and where Jabref imports groups (60m)
 - Understand how and where the metadata containing group information is parsed in Jabref (30m)
 - Understanding the hierarchical structure of the JabRef groups (30m)
 
@@ -141,10 +141,22 @@ Anna
 Emil
 
 Filippa
-- Implementing requirement 1: Adding parsing support for Bibdesk Static groups, putting the correct metadata, and creating an Explicit group (4h)
-- Planning and starting to implement requirement 2 (2h)
+- Implementing requirement 1: 
+  - Parse XML: creating data structure to store XML tags (60m), extracting data from bib file (60m)
+  - Create new Explicit group by adding to metadata (60m)
+  - Adding citation entries to the group (60m)
+- Planning and starting to implement requirement 2:
+  - Creating plan for how to parse Smart groups (60m)
+  - Begin extracting data (60m)
 
 Lotta
+- Implementing requirement 1:
+    - Parse XML: creating data structure to store XML tags (60m), extracting data from bib file (60m)
+    - Create new Explicit group by adding to metadata (60m)
+    - Adding citation entries to the group (60m)
+- Planning and starting to implement requirement 2:
+    - Creating plan for how to parse Smart groups (60m)
+    - Begin extracting data (60m)
 
 Tianning
 
@@ -159,10 +171,14 @@ Anna
 Emil
 
 Filippa
-- Understanding our implementation through logging and running the program and importing different bib files (2h)
+- Understanding our implementation through logging and running the program and importing different bib files:
+  - Requirement 1 (60m)
+  - Requirement 2 (60m)
 
 Lotta
-- Understanding our implementation through logging and running the program and importing different bib files (2h)
+- Understanding our implementation through logging and running the program and importing different bib files:
+    - Requirement 1 (60m)
+    - Requirement 2 (60m)
 
 Tianning
 
