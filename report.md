@@ -196,6 +196,9 @@ Optional (point 3): trace tests to requirements.
 
 Optional (point 4): the patch is clean.
 
+### PR at `Jabref/jabref`
+URL: https://github.com/JabRef/jabref/pull/10968
+
 ## Test results
 
 Overall results with link to a copy or excerpt of the logs (before/after
@@ -240,6 +243,16 @@ In addition, particular function implementations can be found in the [java.org/j
 
 For each layer, JabRef forms packages according to their responsibility, i.e., vertical structuring. The model should have no dependencies on other classes of JabRef and the logic should only depend on model classes.
 
+## What we did not have time to implement
+In BibDesk, there are different types of groups, a majority of which did not translate into any of JabRef's groups.
+We were planning on implementing support for BibDesk's Smart Groups, which is akin to a filter where you can pick which field to focus on,
+what sort of comparison (starts with, is, is not, ends with, etc.), as well as a freeform text field where the user can specify which string to filter the citations on.
+Along with the fact that these groups are stored very differently in the bib file compared to Static groups, this was a very complex task that we did not have time to implement.
+Our main problem was the extraction of the data from the bib file, since some information is stored inside an `<array>` tag while others are in a separate `<dict>`, meaning that we could not use our implementation of parsing Static groups as a base.
+
+However, we do have a plan for how we would implement Smart groups given enough time and knowledge of the `DocumentBuilder` and `NodeList` classes.
+After extracting the relevant information of the 'filter', we would have had to create an Explicit group and then iterate through every citation to see which entries matches the filter,
+and then add these entries to the Explicit group in the same way we added entries from BibDesk Static groups. This is not an optimal solution since it would not keep adding new entries to the group if a newly added citation matched the filter, but there is no group in JabRef that does the same as BibDesk's Smart Groups.
 
 ## Overall experience
 
