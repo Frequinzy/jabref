@@ -113,9 +113,11 @@ Anna
 - SEMAT section of report (30m)
 
 Emil
-- UML diagram (120m)
+- Designing UML diagram (60m)
+- Formatting and including UML diagram in report (60m)
 - Documenting added library (60m)
-- Finalizing Pull Request (90m)
+- Preparing patch (45m)
+- Finalizing Pull Request to follow contribution conventions (45m)
 
 Filippa
 
