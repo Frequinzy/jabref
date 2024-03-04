@@ -39,9 +39,11 @@ Anna
 
 Emil
 
-Filippa
+Filippa (pair-programmed with Lotta)
+- 2h internal discussions
 
-Lotta
+Lotta (pair-programmed with Filippa)
+- 2h internal discussions
 
 Tianning
 
@@ -55,8 +57,18 @@ Anna
 Emil
 
 Filippa
+- Understanding the related classes to the issue (45m)
+- Group types and how they are stored in file (40m)
+- Understanding how the metadata is stored, generated and structured (30m)
+- Figuring out how we would implement Smart Groups (1h)
+- Understanding and learning the classes `DocumentBuilder` and `NodeList` (2h)
 
 Lotta
+- Understanding the related classes to the issue (45m)
+- Group types and how they are stored in file (40m)
+- Understanding how the metadata is stored, generated and structured (30m)
+- Figuring out how we would implement Smart Groups (1h)
+- Understanding and learning the classes `DocumentBuilder` and `NodeList` (2h)
 
 Tianning
 
@@ -70,8 +82,12 @@ Anna
 Emil
 
 Filippa
+- Searching for project and issue (60m)
+- Configuring text editor (20m)
 
 Lotta
+- Searching for project and issue (60 m)
+- Configuring local workspace (20m)
 
 Tianning
 
@@ -85,8 +101,14 @@ Anna
 Emil
 
 Filippa
+- Understand how and where Jabref imports groups (1h)
+- Understand how and where the metadata containing group information is parsed in Jabref (30m)
+- Understanding the hierarchical structure of the JabRef groups (30m)
 
 Lotta
+- Understand how and where Jabref imports groups (1h)
+- Understand how and where the metadata containing group information is parsed in Jabref (30m)
+- Understanding the hierarchical structure of the JabRef groups (30m)
 
 Tianning
 
@@ -100,8 +122,12 @@ Anna
 Emil
 
 Filippa
+- Writing Javadoc for our introduced functions (15m)
+- Writing our time spent in report (15m)
 
 Lotta
+- Writing Javadoc for our introduced functions (15m)
+- Writing our time spent in report (15m)
 
 Tianning
 
@@ -115,6 +141,8 @@ Anna
 Emil
 
 Filippa
+- Implementing requirement 1: Adding parsing support for Bibdesk Static groups, putting the correct metadata, and creating an Explicit group (4h)
+- Planning and starting to implement requirement 2 (2h)
 
 Lotta
 
@@ -131,8 +159,10 @@ Anna
 Emil
 
 Filippa
+- Understanding our implementation through logging and running the program and importing different bib files (2h)
 
 Lotta
+- Understanding our implementation through logging and running the program and importing different bib files (2h)
 
 Tianning
 
@@ -144,8 +174,10 @@ Anna
 Emil
 
 Filippa
+- 18.7h pair programming + 5.75h meetings = 24.5h
 
 Lotta
+- 18.7h pair programming + 5.75h meetings = 24.5h
 
 Tianning
 
