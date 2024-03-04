@@ -40,9 +40,11 @@ Anna
 Emil
 - none
 
-Filippa
+Filippa (pair-programmed with Lotta)
+- 2h internal discussions (around 20m discussion per work session)
 
-Lotta
+Lotta (pair-programmed with Filippa)
+- 2h internal discussions (around 20m discussion per work session)
 
 Tianning
 
@@ -62,8 +64,18 @@ Emil
 - extend understanding of project structure for UML diagram (45m)
 
 Filippa
+- Understanding the related classes to the issue (45m)
+- Group types and how they are stored in file (40m)
+- Understanding how the metadata is stored, generated and structured (30m)
+- Figuring out how we would implement Smart Groups (60m)
+- Understanding and learning the classes `DocumentBuilder` and `NodeList` (60m per class)
 
 Lotta
+- Understanding the related classes to the issue (45m)
+- Group types and how they are stored in file (40m)
+- Understanding how the metadata is stored, generated and structured (30m)
+- Figuring out how we would implement Smart Groups (60m)
+- Understanding and learning the classes `DocumentBuilder` and `NodeList` (60m per class)
 
 Tianning
 
@@ -80,8 +92,12 @@ Emil
 - re-configuring checkstyle (15m)
 
 Filippa
+- Searching for project and issue (60m)
+- Configuring text editor (20m)
 
 Lotta
+- Searching for project and issue (60m)
+- Configuring local workspace (20m)
 
 Tianning
 
@@ -100,8 +116,14 @@ Emil
 - code review (30m)
 
 Filippa
+- Understand how and where Jabref imports groups (60m)
+- Understand how and where the metadata containing group information is parsed in Jabref (30m)
+- Understanding the hierarchical structure of the JabRef groups (30m)
 
 Lotta
+- Understand how and where Jabref imports groups (60m)
+- Understand how and where the metadata containing group information is parsed in Jabref (30m)
+- Understanding the hierarchical structure of the JabRef groups (30m)
 
 Tianning
 
@@ -120,8 +142,12 @@ Emil
 - Finalizing Pull Request to follow contribution conventions (45m)
 
 Filippa
+- Writing Javadoc for our introduced functions (15m)
+- Writing our time spent in report (15m)
 
 Lotta
+- Writing Javadoc for our introduced functions (15m)
+- Writing our time spent in report (15m)
 
 Tianning
 
@@ -138,8 +164,22 @@ Emil
 - adding requirement 4 (60m)
 
 Filippa
+- Implementing requirement 1: 
+  - Parse XML: creating data structure to store XML tags (60m), extracting data from bib file (60m)
+  - Create new Explicit group by adding to metadata (60m)
+  - Adding citation entries to the group (60m)
+- Planning and starting to implement requirement 2:
+  - Creating plan for how to parse Smart groups (60m)
+  - Begin extracting data (60m)
 
 Lotta
+- Implementing requirement 1:
+    - Parse XML: creating data structure to store XML tags (60m), extracting data from bib file (60m)
+    - Create new Explicit group by adding to metadata (60m)
+    - Adding citation entries to the group (60m)
+- Planning and starting to implement requirement 2:
+    - Creating plan for how to parse Smart groups (60m)
+    - Begin extracting data (60m)
 
 Tianning
 
@@ -156,8 +196,14 @@ Emil
 - getting an understanding of JabRef functionality (60m)
 
 Filippa
+- Understanding our implementation through logging and running the program and importing different bib files:
+  - Requirement 1 (60m)
+  - Requirement 2 (60m)
 
 Lotta
+- Understanding our implementation through logging and running the program and importing different bib files:
+    - Requirement 1 (60m)
+    - Requirement 2 (60m)
 
 Tianning
 
@@ -170,8 +216,10 @@ Emil
 - 16.5h individiual + 5.75h meetings = 22.25h
 
 Filippa
+- 18.7h pair programming + 5.75h meetings = 24.5h
 
 Lotta
+- 18.7h pair programming + 5.75h meetings = 24.5h
 
 Tianning
 
