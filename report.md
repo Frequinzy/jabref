@@ -203,6 +203,11 @@ Test logs for tests after changes: [here](https://htmlpreview.github.io/?https:/
 
 ## UML class diagram and its description
 
+![UML diagram as png](UML.png)
+Can also be viewed as a [pdf file](UML.pdf)
+
+This is a small part of the project as a whole. Specifically the most important components for the import command. Which the application uses to import external citation libraries. The classes shown in more detail are ones that have had direct changes when solving the issue. Even then there are plenty of fields and methods that have been omitted due to irrelevance for the issue.
+
 ### Key changes/classes affected
 
 Optional (point 1): Architectural overview.
